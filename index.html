@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HDA Care | Staffing Map v59</title><link rel="icon" type="image/png" href="images/HDA_logo.PNG"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HDA Care | Staffing Map v61</title><link rel="icon" type="image/png" href="images/HDA_logo.PNG"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><style>
 :root{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#17344c;background:#f3f7fb}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}header{background:#fff;border-bottom:1px solid #e1eaf1;display:flex;align-items:center;gap:18px;padding:12px 25px}header img{width:154px;max-height:78px;object-fit:contain}h1{font-size:19px;margin:0}header p{margin:3px 0 0;color:#73899b;font-size:12px}.version{margin-left:auto;border-radius:50px;padding:6px 11px;background:#e8f5ff;color:#075b96;font-size:12px;font-weight:800}.shell{max-width:1700px;margin:auto;padding:22px;display:grid;grid-template-columns:370px minmax(0,1fr);gap:18px;align-items:start}.panel{background:#fff;border:1px solid #e2eaf1;border-radius:15px;box-shadow:0 3px 20px #153a5c08}.left{padding:20px}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:1.4px;font-weight:800;color:#0077b6;margin-bottom:6px}h2{font-size:18px;margin:0 0 6px}.sub{font-size:12px;color:#73889a;line-height:1.5;margin:0 0 15px}.field{margin-top:13px}label{display:block;font-size:12px;font-weight:700;margin-bottom:6px}input:not([type=checkbox]),select{width:100%;height:41px;padding:0 11px;border:1px solid #d7e3eb;border-radius:9px;background:white;color:#17344c;min-width:0}input:focus,select:focus{outline:2px solid #91d1f7;outline-offset:0}.row{display:flex;gap:9px}.row>.field{flex:1;min-width:0}.primary{background:#006ea9;color:white;border:0;border-radius:10px;padding:12px 15px;font-weight:750;width:100%;margin-top:17px}.primary:hover{background:#005b8e}.secondary{border:1px solid #c9dce9;background:#f7fbff;color:#075b91;border-radius:9px;padding:9px 12px;font-weight:700}.uploadbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 14px;margin-bottom:16px}.uploadbar strong{font-size:13px}.uploadbar small{color:#70879a;display:block;margin-top:3px}.workspace{min-width:0}.mapbox{overflow:hidden}.maphead{display:flex;justify-content:space-between;align-items:center;padding:14px 17px;gap:12px}.maphead h2{margin:0;font-size:15px}#map{height:430px;background:#e7eff5}.mapfoot{padding:11px 16px;color:#6a8193;font-size:12px}.results{margin-top:16px;padding:17px}.resultshead{display:flex;justify-content:space-between;align-items:center}.resultshead h2{font-size:16px;margin:0}.result{padding:13px;border:1px solid #e0eaf2;border-radius:11px;margin-top:10px;cursor:pointer}.result:hover{border-color:#8cc4e7;background:#f8fcff}.result b{font-size:13px}.result small{color:#6b8091}.pill{display:inline-block;font-size:10px;font-weight:750;border-radius:20px;padding:4px 7px;background:#e7f6ec;color:#217046}.pill.partial{background:#fff5df;color:#936400}.pill.none{background:#f2f4f6;color:#687786}.muted{color:#6e8597;font-size:12px}.message{font-size:12px;line-height:1.55;margin-top:10px;white-space:pre-line}.message.error{color:#a23434}.message.ok{color:#276a46}.checkline{display:flex;gap:8px;align-items:flex-start;font-size:12px;color:#506a7c;margin-top:12px}.checkline input{margin-top:2px}.checkline label{margin:0;font-weight:500}.weekdays{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}.day{font-size:12px;border:1px solid #d3e2ed;border-radius:8px;padding:7px 8px}.day input{margin-right:4px}.hidden{display:none!important}dialog{margin:auto;position:fixed;inset:0;border:0;border-radius:17px;box-shadow:0 18px 70px #0a294855;padding:0;width:min(540px,calc(100vw - 30px));max-height:85vh}dialog::backdrop{background:#0b294b77}.dialoginner{padding:23px}.dialoginner h2{margin:0 0 10px}.dialoginner p{font-size:13px;line-height:1.6;color:#506a7c}.dialoginner .file{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px;border:1px solid #e1eaf1;border-radius:10px;margin:10px 0}.file input{font-size:11px;width:175px;max-width:50%}.file b{font-size:12px}.file small{display:block;color:#6a8193;margin-top:4px}.info{position:relative;border:0;background:#e9f5ff;color:#09639a;border-radius:50%;width:21px;height:21px;font-size:13px;font-weight:800;vertical-align:middle}.tooltip{display:none;position:fixed;z-index:2000;left:50%;top:50%;transform:translate(-50%,-50%);width:min(280px,70vw);background:#153e5a;color:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 24px #102f5050;font-size:11px;line-height:1.6;font-weight:400;text-align:left}.info:hover .tooltip,.info:focus .tooltip,.info.open .tooltip{display:block}.dialogactions{display:flex;gap:8px;margin-top:16px}.dialogactions button{flex:1;margin:0}.status{font-size:12px;color:#637f90}.mini{font-size:11px;color:#6d8597;margin-top:7px}.details{font-size:11px;line-height:1.65;color:#657d90;margin-top:7px}footer{text-align:center;padding:18px;color:#8093a3;font-size:12px}@media(max-width:900px){.shell{grid-template-columns:1fr;padding:12px;gap:12px}.left{padding:16px}.uploadbar{margin-bottom:12px}#map{height:380px}header{padding:10px 14px;gap:10px}header img{width:105px}h1{font-size:15px}header p{font-size:10px}.version{font-size:11px}.row{gap:7px}}@media(max-width:500px){#map{height:350px}.dialoginner{padding:16px}.file{flex-wrap:wrap}.file input{max-width:100%;width:100%}}
 /* Mobile-safe native date and time controls */
 .field{min-width:0}.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}.row>.field{min-width:0;width:100%}
@@ -70,7 +70,7 @@ input[type="date"]::-webkit-datetime-edit,input[type="time"]::-webkit-datetime-e
 @media(max-width:550px){.view-tab{padding:10px 12px}.map-tools button{padding:6px}.map-tools .full-map{padding:3px 8px}.caregiver-popup{min-width:175px}}
 .search-wrap{position:relative;min-width:0}.search-wrap input{width:100%;padding-right:44px!important}.search-wrap #clearSearch{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:#eaf2f8;color:#235575;width:30px;height:30px;border-radius:50%;font-size:22px;line-height:1;display:none;align-items:center;justify-content:center;padding:0;cursor:pointer}.search-wrap.has-value #clearSearch{display:flex}.tab-hidden{display:none!important}
 
-/* v59: per-file validation states, error banner, sticky load bar */
+/* v60: per-file validation states, error banner, sticky load bar */
 #uploadDialog .file.checking b::after{content:'Checking…';margin-left:auto;color:#5d7486;font-size:11px;font-weight:700}
 #uploadDialog .file.invalid{border-color:#e2a3a3;background:#fff6f6}
 #uploadDialog .file.invalid small{color:#a52a2a;font-weight:600}
@@ -96,7 +96,7 @@ a.tel{color:#006ea9;font-weight:700;text-decoration:none;white-space:nowrap}a.te
 .caregiver-popup .popup-status{font-size:12px;line-height:1.5;color:#1f4a35;background:#f1f8f4;border-radius:7px;padding:7px 8px;margin:-2px 0 8px}
 @media(max-width:550px){.legend-note{margin-left:0;width:100%}}
 
-/* v59 design refresh (desktop first) */
+/* v60 design refresh (desktop first) */
 :root{--hda:#006ea9;--hda-dark:#0b4f7c;--ink:#17344c;--line:#e1eaf1}
 body{background:linear-gradient(180deg,#eef5fb 0,#f3f7fb 240px)}
 header{border-top:4px solid var(--hda);box-shadow:0 1px 0 #e1eaf1,0 4px 18px #0c3a5c0a;position:relative;z-index:5}
@@ -134,14 +134,110 @@ a.dir{color:#006ea9;font-weight:650;text-decoration:none;white-space:nowrap}a.di
 
 .mapbox.is-fullscreen .chips{display:none!important}
 @media(max-width:550px){.caregiver-popup{max-height:min(44vh,290px);overflow-y:auto;-webkit-overflow-scrolling:touch}.chip{font-size:12px;padding:4px 9px}#map{height:420px}.mapbox.is-fullscreen .maphead{padding:8px 12px}.mapbox.is-fullscreen .mapfoot{padding:7px 12px;gap:4px 12px}.mapbox.is-fullscreen .legend-item{font-size:11.5px}}
-</style></head><body><header><img src="images/HDA_logo.PNG" alt="HDA Care"><div><h1>Caregiver Staffing Map</h1><p>Find coverage based on where caregivers will be</p></div><span class="version">v59</span></header><div class="shell"><div class="panel uploadbar" id="uploadStep"><div><strong id="dataTitle">Step 1 · Upload reports</strong><small id="dataSubtitle">Upload your three HHAXchange reports to get started</small><small id="dataSkipped" class="load-summary hidden"></small><small id="dataFresh" class="load-fresh hidden"></small></div><div class="upload-actions"><button class="ghost hidden" id="clearData" type="button" title="Remove the loaded reports from this computer">Clear data</button><button class="ghost" id="sampleData" type="button" title="Load built-in fictional demo data">Try with sample data</button><button class="secondary" id="openUpload">↥ Upload reports</button></div></div><aside class="panel left"><div class="eyebrow">Step 2 · Patient search</div><h2>Find a caregiver</h2><p class="sub">Search for a patient and find nearby caregivers.</p><div class="field"><label for="search">Patient name, Admission ID or ZIP</label><div class="search-wrap" id="searchWrap"><input id="search" placeholder="Search patients..." autocomplete="off"><button type="button" id="clearSearch" aria-label="Clear patient search" title="Clear search">×</button></div></div><div id="suggestions" class="suggestions hidden" role="listbox"></div><input type="hidden" id="patient"><div class="mini" id="address"></div><input type="hidden" id="mode" value="single"><div class="field"><label for="maxDistance">Maximum distance</label><select id="maxDistance"><option value="1">Within 1 mile</option><option value="2">Within 2 miles</option><option value="3" selected>Within 3 miles</option><option value="5">Within 5 miles</option><option value="10">Within 10 miles</option><option value="25">Within 25 miles</option><option value="any">No distance limit</option></select><div class="mini">Straight-line distance from a caregiver's visit location or home.</div></div><div id="scheduleFields"><div class="field"><label for="date">Coverage needed on</label><div class="picker-shell"><span class="picker-display" id="dateDisplay">Select date</span><input type="date" id="date" aria-label="Coverage date"></div></div><div id="recurring" class="hidden"><div class="field"><label>Repeat on</label><div class="weekdays" id="weekdays"></div></div><div class="field"><label for="weeks">For how many weeks?</label><input id="weeks" type="number" min="1" max="12" value="4"></div></div><div class="row"><div class="field"><label for="start">From</label><div class="picker-shell"><span class="picker-display" id="startDisplay">2:00 PM</span><input type="time" id="start" value="14:00" aria-label="Coverage start time"></div></div><div class="field"><label for="end">Until</label><div class="picker-shell"><span class="picker-display" id="endDisplay">4:00 PM</span><input type="time" id="end" value="16:00" aria-label="Coverage end time"></div></div></div><div class="mini">Shows where each caregiver is scheduled around this time.</div></div><label class="availability-toggle"><input type="checkbox" id="ignoreTime"> Ignore time: show everyone near, any time</label><button class="primary" id="find">Find caregivers →</button><div id="lookupProgress" class="progresswrap hidden"><div class="progresshead"><span id="progressLabel">Preparing map…</span><span id="progressPercent">0%</span></div><div class="progressbar"><div id="progressFill"></div></div></div><div id="searchStatus" class="message muted"></div></aside><div class="workspace"><div class="panel mapbox"><div class="maphead"><h2 id="mapTitle">Patient location map</h2><div class="mapactions"><span class="status" id="mapStatus">Select a patient</span><button class="recenter hidden" id="recenter" type="button" title="Jump to selected patient" aria-label="Jump to selected patient on map">⌖ <span id="recenterName">Patient</span></button></div></div><div class="chips hidden" id="chips"></div><div class="view-tabs" role="tablist" aria-label="Caregiver results view"><button class="view-tab active" id="mapTab" type="button" role="tab" aria-selected="true">Map <span id="mapTabCount"></span></button><button class="view-tab" id="listTab" type="button" role="tab" aria-selected="false">List <span id="listTabCount"></span></button><div class="map-tools" id="mapTools"><button type="button" id="streetLayer" class="active" title="Street map">Map</button><button type="button" id="satelliteLayer" title="Satellite imagery">Satellite</button><button type="button" id="fullMap" class="full-map" aria-label="Full screen map" title="Full screen map">⛶</button></div></div><div id="map"></div><div class="mapfoot" id="mapFoot"><span class="legend-item legend-red"><span class="legend-pin" aria-hidden="true">●</span> Selected patient</span><span class="legend-item legend-green"><span class="legend-pin" aria-hidden="true">●</span> <span id="legendGreen">On a shift nearby</span></span><span class="legend-item legend-blue"><span class="legend-pin" aria-hidden="true">●</span> <span id="legendBlue">Lives nearby, no visit at this time</span></span><label class="legend-item legend-gray" id="legendGrayItem" title="Show or hide caregivers who live nearby but are scheduled at a case elsewhere"><input type="checkbox" id="showGray" checked><span class="legend-pin" aria-hidden="true">●</span> Lives nearby, busy elsewhere</label><span class="legend-note">Distances are straight-line</span></div></div><div class="panel results tab-hidden"><div class="resultshead"><h2>Caregiver matches</h2><span class="status" id="count"></span></div><div class="message muted" id="summary">Upload reports and choose a patient to see matches.</div><div id="results"></div></div></div></div><footer>A Davidowitz Project © 2026 · v59</footer>
-<dialog id="uploadDialog"><div class="dialoginner"><div style="display:flex;justify-content:space-between;align-items:center"><h2>Import HHAXchange reports</h2><button class="secondary" id="closeUpload" style="padding:6px 10px">✕</button></div><p>Upload the original Excel files. No renaming or editing columns required. Information icons show how to run each report.</p><div id="uploadAlert" class="upload-alert hidden" role="alert" tabindex="-1"></div><div class="file"><div><b>1. Patients <button type="button" class="info" aria-label="Patient report instructions">i<span class="tooltip"><b>Report 1: Patients</b><br><b>HHAXchange path:</b> Reports → Patient → List of Patients (Ent)<ol style='margin:6px 0 6px 18px;padding:0'><li>Leave every default filter as is.</li><li>Under <b>Select Patient Address Columns</b>, click <b>Check All</b>.</li><li>Click <b>View Report</b>, then export to <b>Excel</b>.</li><li>Upload that Excel file here. Do not rename or edit it.</li></ol><b>File name looks like:</b> List of Patients Ent ###.xlsx</span></button></b><small id="patientState">No file selected</small></div><input type="file" id="patientsFile" accept=".xlsx,.xls,.csv"></div><div class="file"><div><b>2. Caregivers <button type="button" class="info" aria-label="Caregiver report instructions">i<span class="tooltip"><b>Report 2: Caregivers</b><br><b>HHAXchange path:</b> Reports → Caregiver → List of Caregivers (Ent)<ol style='margin:6px 0 6px 18px;padding:0'><li>Leave every default filter as is.</li><li>Under <b>Select Caregiver Address Columns</b>, click <b>Check All</b>.</li><li>Click <b>View Report</b>, then export to <b>Excel</b>.</li><li>Upload that Excel file here. Do not rename or edit it.</li></ol><b>File name looks like:</b> List Of Caregivers Ent ###.xlsx</span></button></b><small id="caregiverState">No file selected</small></div><input type="file" id="caregiversFile" accept=".xlsx,.xls,.csv"></div><div class="file"><div><b>3. Scheduled visits <button type="button" class="info" aria-label="Visit report instructions">i<span class="tooltip"><b>Report 3: Scheduled visits</b><br><b>HHAXchange path:</b> Reports → Visits → Visit → Visit Report<ol style='margin:6px 0 6px 18px;padding:0'><li><b>Visit Date From / To:</b> today through the last day you may need to staff.</li><li>Office, Contract, Caregiver, Patient: leave as <b>All</b>.</li><li>Check <b>Display Only Schedule</b>.</li><li>Leave everything else at the default.</li><li>Click <b>Generate Report</b>, then download it as <b>Excel</b> (not CSV).</li><li>Upload that Excel file here. Do not rename or edit it.</li></ol><b>File name looks like:</b> Visit_Report_#######_##############.xlsx</span></button></b><small id="visitState">No file selected</small></div><input type="file" id="visitsFile" accept=".xlsx,.xls,.csv"></div><div class="privacy"><b>Address lookup for testing</b><p>The reports are read in your browser. To show map pins, this demo sends street addresses near the selected patient (street, city, state, ZIP only) to the public US Census Bureau geocoder when you search, and to OpenStreetMap Nominatim only if the Census cannot find an address. Names, IDs, phones and schedules are not included in those lookup requests. Map tiles come from OpenStreetMap and Esri. Do not use real patient or caregiver addresses without agency approval and an appropriate privacy arrangement.</p><label class="checkline"><input type="checkbox" id="demoConsent"><strong class="required-star" aria-label="required">*</strong><span>I confirm these reports contain fictional/test addresses and approve sending those addresses to the public geocoding service when I search.</span></label></div><div class="upload-footer"><div class="message" id="importStatus" aria-live="polite"></div><div class="dialogactions"><button class="primary is-disabled" id="import" style="margin:0" aria-disabled="true">Load reports</button></div></div></div><div id="reportHelp" role="dialog" aria-label="Report instructions"><button type="button" id="reportHelpClose" aria-label="Close instructions">×</button><span id="reportHelpText"></span></div></dialog>
+
+
+
+/* v61: upload card: minimal stats, equal buttons, details popup */
+.uploadbar{display:block!important;padding:14px 16px!important}
+.ub-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ub-head strong{font-size:14px;display:flex;align-items:center}
+.linkbtn{border:0;background:none;color:#006ea9;font:inherit;font-size:12.5px;font-weight:650;padding:2px 0;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.stat-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:11px}
+.stat{background:#f3f8fb;border:1px solid #dce9f1;border-radius:10px;padding:8px 6px;text-align:center;min-width:0}
+.stat b{display:block;font-size:19px;line-height:1.15;color:#0b4f7c;font-variant-numeric:tabular-nums;letter-spacing:-.2px}
+.stat span{display:block;font-size:11px;color:#617b8d;margin-top:2px;font-weight:600}
+.uploadbar .ub-meta{display:block;color:#6d8496;font-size:11.5px;margin-top:4px}
+.ub-left{min-width:0}
+@media(min-width:901px){.uploadbar{display:grid!important;grid-template-columns:minmax(200px,1fr) minmax(300px,440px) 320px;align-items:center;gap:20px}
+ .ub-main{display:contents}.ub-head{justify-content:flex-start;gap:12px}.stat-row{margin-top:0}.upload-actions{margin-top:0;grid-column:3}}
+.upload-actions{display:grid!important;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:8px;margin-top:12px;width:100%}
+.upload-actions .ub-btn{height:36px;min-width:0;width:100%;padding:0 6px;border-radius:9px;border:1px solid #c9dbe7;background:#fff;color:#1f4a66;font:inherit;font-size:13px;font-weight:650;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;margin:0;box-shadow:none}
+.upload-actions .ub-btn:hover{background:#eef5fa}
+.upload-actions .ub-btn.ub-primary{background:#006ea9;border-color:#006ea9;color:#fff}
+.upload-actions .ub-btn.ub-primary:hover{background:#005b8e}
+.upload-actions .ub-btn.hidden{display:none!important}
+.uploadbar.upload-done{color:inherit!important;font-weight:inherit!important}
+.uploadbar.upload-done #dataTitle{color:#188455}
+.details-dialog{border:0;border-radius:14px;padding:0;width:min(620px,calc(100vw - 24px));max-height:min(80vh,720px);box-shadow:0 18px 50px rgba(10,30,50,.3);color:#17344c}
+.details-dialog::backdrop{background:rgba(15,35,55,.45)}
+.dd-inner{padding:16px 18px 18px;overflow:auto;max-height:min(80vh,720px);box-sizing:border-box}
+.dd-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.dd-head b{font-size:16px}
+.dd-close{border:0;background:#eef3f7;width:32px;height:32px;border-radius:50%;font-size:21px;line-height:1;cursor:pointer;color:#35556b}
+.dd-sec{border-top:1px solid #e3ecf2;padding:10px 0}
+.dd-row{display:flex;justify-content:space-between;gap:12px;font-size:13px;padding:3px 0}
+.dd-row span{color:#5f7789}.dd-row b{text-align:right;overflow-wrap:anywhere;font-weight:650}
+.dd-title{font-size:13px;font-weight:750;margin-bottom:6px}
+.dd-reason{font-size:13px;margin:4px 0;border:1px solid #e3ecf2;border-radius:8px;padding:6px 9px}
+.dd-reason summary{cursor:pointer}
+.dd-tablewrap{overflow:auto;max-height:240px;margin-top:6px}
+.dd-table{border-collapse:collapse;width:100%;font-size:12px}
+.dd-table th,.dd-table td{text-align:left;padding:4px 6px;border-bottom:1px solid #edf2f6;white-space:nowrap}
+.dd-table th{font-size:11px;color:#6a8193;text-transform:uppercase;letter-spacing:.3px}
+.dd-notes p,.dd-note{font-size:12.5px;color:#4f6a7d;margin:4px 0}
+/* v61: Today / Tomorrow segmented control */
+.segmented{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #c9dbe7;border-radius:10px;overflow:visible;background:#fff;height:42px}
+.seg{position:relative;border:0;background:#fff;color:#1f4a66;font:inherit;font-size:14px;font-weight:650;cursor:pointer;padding:0 4px;white-space:nowrap;min-width:0}
+.seg+.seg{border-left:1px solid #c9dbe7}
+.seg:first-child{border-radius:9px 0 0 9px}.seg:last-child{border-radius:0 9px 9px 0}
+.seg.active{background:#006ea9;color:#fff}
+.seg:not(.active):not(.seg-soon):hover{background:#eef5fa}
+.seg-soon{color:#a3b1bc;background:#f5f7f9;cursor:not-allowed;font-weight:550}
+.soon-tip{position:absolute;bottom:calc(100% + 7px);right:0;background:#17344c;color:#fff;font-size:12px;font-weight:600;padding:5px 9px;border-radius:7px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:20}
+.seg-soon:hover .soon-tip,.seg-soon.show-tip .soon-tip{opacity:1}
+.result-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.sched{margin-top:4px;font-size:12.5px;color:#36566c}
+.sched-h{font-weight:650;color:#24455c}
+.sched ul{margin:2px 0 0;padding-left:17px}
+.sched li{margin:1px 0}
+.sched li.sched-near .vt{font-weight:700}
+.vs{display:inline-block;font-size:11.5px;font-weight:650;border-radius:5px;padding:0 5px;margin-left:2px;line-height:17px;white-space:nowrap}
+.vs-on{background:#e3f5ea;color:#16794c;font-weight:800}
+.vs-later{background:#eef3f7;color:#3f5d72}
+.vs-ended{color:#8a99a5;font-weight:550;padding:0}
+.caregiver-popup .sched{margin:6px 0 8px;padding:7px 9px;background:#f4f8fb;border-radius:8px}
+.chip.day-chip{background:#006ea9;border-color:#006ea9;color:#fff;font-weight:700}
+
+/* v61: loading overlay on the map (the one progress indicator), discipline filter + tags */
+#map{position:relative}
+.map-loading{position:absolute;inset:0;z-index:1200;display:flex;justify-content:center;align-items:flex-start;padding:0 14px;background:rgba(22,44,64,.5);transition:opacity .25s;cursor:progress}
+.map-loading.has-pin{background:radial-gradient(circle at 50% calc(50% - 24px),rgba(22,44,64,0) 0,rgba(22,44,64,0) 46px,rgba(22,44,64,.5) 76px)}
+.map-loading.fade{opacity:0;pointer-events:none}
+.map-loading .ml-card{position:absolute;left:50%;transform:translateX(-50%);top:min(calc(50% + 42px),calc(100% - 112px));width:min(440px,calc(100% - 28px));box-sizing:border-box;display:flex;align-items:center;gap:13px;background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 10px 34px rgba(10,30,50,.32);font-family:inherit;color:#17344c;cursor:default}
+.map-loading:not(.has-pin) .ml-card{top:50%;transform:translate(-50%,-50%)}
+.map-loading .ml-err{display:none}
+.map-loading.is-error{background:rgba(22,44,64,.5)}
+.map-loading.is-error .ml-progress{display:none}
+.map-loading.is-error .ml-err{display:flex;top:50%;transform:translate(-50%,-50%);border-top:4px solid #d23c45;align-items:flex-start}
+.ml-spin{flex:none;width:34px;height:34px;border-radius:50%;border:4px solid #d9e8f2;border-top-color:#0079b8;animation:mlspin .8s linear infinite}
+@keyframes mlspin{to{transform:rotate(360deg)}}
+.ml-body{flex:1;min-width:0}
+.ml-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:15.5px;font-weight:750;line-height:1.25}
+.ml-head b{font-size:19px;color:#006ea9;font-variant-numeric:tabular-nums}
+.ml-sub{font-size:12.8px;color:#5a7385;margin-top:3px;line-height:1.35;overflow-wrap:anywhere}
+.ml-bar{height:6px;background:#e4eef5;border-radius:9px;overflow:hidden;margin-top:9px}
+.ml-bar i{display:block;height:100%;width:0;background:#0079b8;border-radius:9px;transition:width .25s}
+.ml-stop{flex:none;align-self:center;border:1px solid #cddbe5;background:#fff;color:#35556b;border-radius:8px;padding:6px 10px;font-size:12.5px;font-weight:650;cursor:pointer}
+.ml-stop:hover{background:#f2f7fa}
+.ml-erricon{flex:none;width:30px;height:30px;border-radius:50%;background:#fdecee;color:#c8323c;font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center}
+.ml-close{flex:none;border:0;background:#eef3f7;color:#35556b;width:32px;height:32px;border-radius:50%;font-size:21px;line-height:1;cursor:pointer}
+.ml-close:hover{background:#e0e9f0}
+.btn-spin{display:inline-block;width:13px;height:13px;border:2px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:mlspin .8s linear infinite;vertical-align:-2px;margin-right:8px}
+#find:disabled{opacity:.92;cursor:progress}
+.filter-row{display:flex;gap:10px}
+.filter-row>.field{flex:1;min-width:0}
+.filter-row>#discField{flex:0 0 38%}
+.filter-row select{width:100%;min-width:0}
+.disc-tag{display:inline-block;font-size:10.5px;font-weight:750;letter-spacing:.02em;color:#2f5f80;background:#e8f1f8;border:1px solid #d3e3ef;border-radius:5px;padding:0 5px;margin-left:5px;vertical-align:1px;line-height:16px}
+@media(max-width:550px){.map-loading .ml-card{padding:12px 13px;gap:11px}.ml-head{font-size:14.5px}.ml-head b{font-size:17px}.ml-spin{width:28px;height:28px}}
+</style></head><body><header><img src="images/HDA_logo.PNG" alt="HDA Care"><div><h1>Caregiver Staffing Map</h1><p>Find coverage based on where caregivers will be</p></div><span class="version">v61</span></header><div class="shell"><div class="panel uploadbar" id="uploadStep"><div class="ub-main"><div class="ub-left"><div class="ub-head"><strong id="dataTitle">Step 1 · Upload reports</strong><button type="button" class="linkbtn hidden" id="dataDetails">Details</button></div><small id="dataSubtitle">Upload your three HHAXchange reports to get started</small><small id="dataMeta" class="ub-meta hidden"></small></div><div class="stat-row hidden" id="dataStats"><div class="stat"><b id="statPatients">0</b><span>Patients</span></div><div class="stat"><b id="statCaregivers">0</b><span>Caregivers</span></div><div class="stat"><b id="statVisits">0</b><span>Visits</span></div></div></div><div class="upload-actions"><button class="ub-btn hidden" id="clearData" type="button" title="Remove the loaded reports from this computer">Clear</button><button class="ub-btn" id="sampleData" type="button" title="Load built-in fictional demo data">Sample data</button><button class="ub-btn ub-primary" id="openUpload" type="button">Upload</button></div></div><aside class="panel left"><div class="eyebrow">Step 2 · Patient search</div><h2>Find a caregiver</h2><p class="sub">Search for a patient and find nearby caregivers.</p><div class="field"><label for="search">Patient name, Admission ID or ZIP</label><div class="search-wrap" id="searchWrap"><input id="search" placeholder="Search patients..." autocomplete="off"><button type="button" id="clearSearch" aria-label="Clear patient search" title="Clear search">×</button></div></div><div id="suggestions" class="suggestions hidden" role="listbox"></div><input type="hidden" id="patient"><div class="mini" id="address"></div><input type="hidden" id="mode" value="single"><div class="filter-row"><div class="field"><label for="maxDistance">Maximum distance</label><select id="maxDistance"><option value="1">Within 1 mile</option><option value="2">Within 2 miles</option><option value="3" selected>Within 3 miles</option><option value="5">Within 5 miles</option><option value="10">Within 10 miles</option><option value="25">Within 25 miles</option><option value="any">No distance limit</option></select></div><div class="field hidden" id="discField"><label for="discFilter">Discipline</label><select id="discFilter"><option value="">All</option></select></div></div><div class="field"><label id="dayLabel">Coverage day</label><div class="segmented" role="radiogroup" aria-labelledby="dayLabel"><button type="button" class="seg active" id="dayToday" data-day="0" role="radio" aria-checked="true">Today</button><button type="button" class="seg" id="dayTomorrow" data-day="1" role="radio" aria-checked="false">Tomorrow</button><button type="button" class="seg seg-soon" id="dayCustom" aria-disabled="true" title="Coming soon">Custom date<span class="soon-tip" role="tooltip">Coming soon</span></button></div></div><button class="primary" id="find">Find caregivers →</button><div id="searchStatus" class="message muted"></div></aside><div class="workspace"><div class="panel mapbox"><div class="maphead"><h2 id="mapTitle">Patient location map</h2><div class="mapactions"><span class="status" id="mapStatus">Select a patient</span><button class="recenter hidden" id="recenter" type="button" title="Jump to selected patient" aria-label="Jump to selected patient on map">⌖ <span id="recenterName">Patient</span></button></div></div><div class="chips hidden" id="chips"></div><div class="view-tabs" role="tablist" aria-label="Caregiver results view"><button class="view-tab active" id="mapTab" type="button" role="tab" aria-selected="true">Map <span id="mapTabCount"></span></button><button class="view-tab" id="listTab" type="button" role="tab" aria-selected="false">List <span id="listTabCount"></span></button><div class="map-tools" id="mapTools"><button type="button" id="streetLayer" class="active" title="Street map">Map</button><button type="button" id="satelliteLayer" title="Satellite imagery">Satellite</button><button type="button" id="fullMap" class="full-map" aria-label="Full screen map" title="Full screen map">⛶</button></div></div><div id="map"></div><div class="mapfoot" id="mapFoot"><span class="legend-item legend-red"><span class="legend-pin" aria-hidden="true">●</span> Selected patient</span><span class="legend-item legend-green"><span class="legend-pin" aria-hidden="true">●</span> <span id="legendGreen">Scheduled nearby that day</span></span><span class="legend-item legend-blue"><span class="legend-pin" aria-hidden="true">●</span> <span id="legendBlue">Lives nearby</span></span><span class="legend-note">Distances are straight-line</span></div></div><div class="panel results tab-hidden"><div class="resultshead"><h2>Caregiver matches</h2><span class="status" id="count"></span></div><div class="message muted" id="summary">Upload reports and choose a patient to see matches.</div><div id="results"></div></div></div></div><footer>A Davidowitz Project © 2026 · v61</footer>
+<dialog id="detailsDialog" class="details-dialog"><div class="dd-inner"><div class="dd-head"><b>Report details</b><button type="button" class="dd-close" id="detailsClose" aria-label="Close">×</button></div><div id="detailsBody"></div></div></dialog><dialog id="uploadDialog"><div class="dialoginner"><div style="display:flex;justify-content:space-between;align-items:center"><h2>Import HHAXchange reports</h2><button class="secondary" id="closeUpload" style="padding:6px 10px">✕</button></div><p>Upload the original Excel files. No renaming or editing columns required. Information icons show how to run each report.</p><div id="uploadAlert" class="upload-alert hidden" role="alert" tabindex="-1"></div><div class="file"><div><b>1. Patients <button type="button" class="info" aria-label="Patient report instructions">i<span class="tooltip"><b>Report 1: Patients</b><br><b>HHAXchange path:</b> Reports → Patient → List of Patients (Ent)<ol style='margin:6px 0 6px 18px;padding:0'><li>Leave every default filter as is.</li><li>Under <b>Select Patient Address Columns</b>, click <b>Check All</b>.</li><li>Click <b>View Report</b>, then export to <b>Excel</b>.</li><li>Upload that Excel file here. Do not rename or edit it.</li></ol><b>File name looks like:</b> List of Patients Ent ###.xlsx</span></button></b><small id="patientState">No file selected</small></div><input type="file" id="patientsFile" accept=".xlsx,.xls,.csv"></div><div class="file"><div><b>2. Caregivers <button type="button" class="info" aria-label="Caregiver report instructions">i<span class="tooltip"><b>Report 2: Caregivers</b><br><b>HHAXchange path:</b> Reports → Caregiver → List of Caregivers (Ent)<ol style='margin:6px 0 6px 18px;padding:0'><li><b>Status:</b> Active (so former caregivers don't show up). Leave the other filters as they are.</li><li>Under <b>Select Caregiver Address Columns</b>, click <b>Check All</b>.</li><li>Click <b>View Report</b>, then export to <b>Excel</b>.</li><li>Upload that Excel file here. Do not rename or edit it.</li></ol><b>File name looks like:</b> List Of Caregivers Ent ###.xlsx</span></button></b><small id="caregiverState">No file selected</small></div><input type="file" id="caregiversFile" accept=".xlsx,.xls,.csv"></div><div class="file"><div><b>3. Scheduled visits <button type="button" class="info" aria-label="Visit report instructions">i<span class="tooltip"><b>Report 3: Scheduled visits</b><br><b>HHAXchange path:</b> Reports → Visits → Visit → Visit Report<ol style='margin:6px 0 6px 18px;padding:0'><li><b>Visit Date From:</b> today's date.<br><b>Visit Date To:</b> tomorrow's date. (Visits before today are ignored.)</li><li>Office, Contract, Caregiver, Patient: leave as <b>All</b>.</li><li>Check <b>Display Only Schedule</b>.</li><li>Leave everything else at the default.</li><li>Click <b>Generate Report</b>, then download it as <b>Excel</b> (not CSV).</li><li>Upload that Excel file here. Do not rename or edit it.</li></ol><b>File name looks like:</b> Visit_Report_#######_##############.xlsx</span></button></b><small id="visitState">No file selected</small></div><input type="file" id="visitsFile" accept=".xlsx,.xls,.csv"></div><div class="privacy"><b>Address lookup for testing</b><p>The reports are read in your browser. To show map pins, this demo sends street addresses near the selected patient (street, city, state, ZIP only) to the public US Census Bureau geocoder when you search, and to OpenStreetMap Nominatim only if the Census cannot find an address. Names, IDs, phones and schedules are not included in those lookup requests. Map tiles come from OpenStreetMap and Esri. Do not use real patient or caregiver addresses without agency approval and an appropriate privacy arrangement.</p><label class="checkline"><input type="checkbox" id="demoConsent"><strong class="required-star" aria-label="required">*</strong><span>I confirm these reports contain fictional/test addresses and approve sending those addresses to the public geocoding service when I search.</span></label></div><div class="upload-footer"><div class="message" id="importStatus" aria-live="polite"></div><div class="dialogactions"><button class="primary is-disabled" id="import" style="margin:0" aria-disabled="true">Load reports</button></div></div></div><div id="reportHelp" role="dialog" aria-label="Report instructions"><button type="button" id="reportHelpClose" aria-label="Close instructions">×</button><span id="reportHelpText"></span></div></dialog>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
 'use strict';
-/* HDA Care Caregiver Staffing Map v59 */
-const APP_VERSION='v59';
+/* HDA Care Caregiver Staffing Map v61 */
+const APP_VERSION='v61';
 const $=id=>document.getElementById(id);
 let patients=[],caregivers=[],visits=[],patientsById=new Map(),caregiversById=new Map(),visitsByCaregiver=new Map(),visitPatientsByCaregiver=new Map(),visitRange=null,hasDiscipline=false;
 let map,markers,paths,targetMarker=null;
@@ -194,7 +290,9 @@ const REPORTS={
   caregiver:{req:1,label:'Caregiver (Code)',alias:['caregivercode','caregiver','caregiverid']},
   date:{req:1,label:'Visit Date',alias:['visitdate','date','servicedate','scheduledate','scheduleddate']},
   sched:{req:1,label:'Scheduled',alias:['scheduled','scheduledtime','scheduledtimes','schedule','scheduletime','scheduledhours']},
-  vid:{label:'Visit ID',alias:['visitid']}}}};
+  vid:{label:'Visit ID',alias:['visitid']},
+  missed:{label:'Missed Visit',alias:['missedvisit','missed']},
+  disc:{label:'Discipline',alias:['discipline','disciplines']}}}};
 const SLOT_KEYS=['patients','caregivers','visits'];
 function classifyRow(sq){
  const has=k=>sq.includes(k);
@@ -301,26 +399,38 @@ async function validateFile(expected,file){
   res.summary=`${def.report} · ${plural(res.records.length,'caregiver')}${phones.length?` · phone: ${phones.map(p=>p.label).join(', ')}`:' · no phone column'}`}
  else{
   const pv=parseVisitRows(data,t.map);res.parsed=pv;
+  {const t0=dayNum(localISO(new Date()))*1440;if(pv.out.length&&!pv.out.some(v=>v.absStart<t0+2880&&v.absEnd>t0))throw Error(`This Visit Report has no visits for today or tomorrow (it covers ${fmtRange(pv.range[0],pv.range[1])}). Rerun it with Visit Date From = today and Visit Date To = tomorrow.`)
+   if(!pv.out.length&&pv.skips.past&&pv.skips.past.n>=data.length*0.5)throw Error('This Visit Report has no visits for today or tomorrow (all its visits are in the past). Rerun it with Visit Date From = today and Visit Date To = tomorrow.')}
   if(!pv.out.length)throw Error(`None of the ${plural(data.length,'visit row')} could be used: ${skipText(pv.skips,true)}.`);
-  res.summary=`${def.report} · ${plural(pv.out.length,'usable visit')} of ${fmtN(data.length)} rows${pv.range?` · ${fmtDate(pv.range[0],{month:'numeric',day:'numeric',year:'2-digit'})}–${fmtDate(pv.range[1],{month:'numeric',day:'numeric',year:'2-digit'})}`:''}`}
+  res.summary=`${def.report} · ${plural(pv.out.length,'usable visit')} from today on (${fmtN(data.length)} rows${pv.skips.past?`, ${fmtN(pv.skips.past.n)} past ignored`:''})${pv.range?` · ${fmtRange(pv.range[0],pv.range[1])}`:''}`}
  return res}
+function fmtRange(a,b){const f=x=>fmtDate(x,{weekday:'short',month:'short',day:'numeric'});return a===b?f(a):`${f(a)} – ${f(b)}`}
+function rangeLabel(a,b){const t=localISO(new Date()),tm=isoFromDay(dayNum(t)+1);if(a<=t&&b===tm)return 'Today & tomorrow';if(a<=t&&b===t)return 'Today only';return fmtRange(a<t?t:a,b)}
 function dedupeById(list){let seen=new Map();for(const x of list)if(!seen.has(x.id))seen.set(x.id,x);return [...seen.values()]}
-const SKIP_LABELS={nocg:'no caregiver assigned',nopt:'no patient ID',time:'bad time format',date:'bad date',dup:'duplicate rows',cgunknown:'caregiver not in Caregivers report',ptunknown:'patient not in Patients report'};
-function addSkip(sk,k,example){if(!sk[k])sk[k]={n:0,ex:[]};sk[k].n++;if(example!=null&&String(example).trim()&&sk[k].ex.length<2&&!sk[k].ex.includes(String(example).trim()))sk[k].ex.push(String(example).trim())}
+const SKIP_LABELS={past:'past visits (before today) ignored',missed:'missed visit',nocg:'no caregiver assigned',nopt:'no patient ID',time:'bad time format',date:'bad date',dup:'duplicate (same visit listed twice)',cgunknown:'caregiver not in Caregivers report',ptunknown:'patient not in Patients report'};
+function addSkip(sk,k,example,row){if(!sk[k])sk[k]={n:0,ex:[],rows:[]};sk[k].n++;if(row&&k!=='past'){if(!sk[k].rows)sk[k].rows=[];if(sk[k].rows.length<300)sk[k].rows.push(row)}if(example!=null&&String(example).trim()&&sk[k].ex.length<2&&!sk[k].ex.includes(String(example).trim()))sk[k].ex.push(String(example).trim())}
 function skipText(sk,withEx){let parts=Object.entries(sk).filter(([k,v])=>v.n).sort((a,b)=>b[1].n-a[1].n).map(([k,v])=>`${fmtN(v.n)} ${SKIP_LABELS[k]}${withEx&&v.ex.length?' (e.g. "'+v.ex.join('", "')+'")':''}`);return parts.join(', ')||'none'}
 function parseVisitRows(data,m){
- const skips={},out=[],seen=new Set();let lo=null,hi=null;
+ // v61: visits that ended before today are ignored (an overnight that started yesterday and runs into today is kept);
+ // rows marked Missed Visit = Yes are skipped (not real presence).
+ const skips={},out=[],seen=new Set();let lo=null,hi=null;const today0=dayNum(localISO(new Date()))*1440;
+ const isYes=v=>/^(y|yes|true|1|x)$/i.test(cell(v));
  for(const r of data){
   const rawPt=m.patient==null?'':r[m.patient],rawCg=m.caregiver==null?'':r[m.caregiver],rawDate=r[m.date],rawSched=r[m.sched];
-  const pt=parseID(rawPt),cg=parseID(rawCg);
-  if(!cg){addSkip(skips,'nocg');continue}
-  if(!pt){addSkip(skips,'nopt');continue}
-  const date=parseDateCell(rawDate);if(!date){addSkip(skips,'date',cell(rawDate)||'(blank)');continue}
-  const tr=parseRange(rawSched);if(!tr){addSkip(skips,'time',cell(rawSched)||'(blank)');continue}
-  const vid=m.vid==null?'':cell(r[m.vid]);
-  const key=vid||[cg,pt,date,tr.start,tr.end].join('|');if(seen.has(key)){addSkip(skips,'dup');continue}seen.add(key);
+  const vid=m.vid==null?'':cell(r[m.vid]),info={vid,pt:cell(rawPt),cg:cell(rawCg),date:cell(rawDate),sched:cell(rawSched)};
+  const date=parseDateCell(rawDate);if(!date){addSkip(skips,'date',cell(rawDate)||'(blank)',info);continue}
+  info.date=fmtDate(date,{month:'numeric',day:'numeric',year:'2-digit'});
+  const tr=parseRange(rawSched);
   const d0=dayNum(date)*1440;
-  out.push({patient:pt,caregiver:cg,date,start:tr.start,end:tr.end,absStart:d0+tr.start,absEnd:d0+tr.end,id:vid});
+  if(d0+(tr?tr.end:1440)<=today0){addSkip(skips,'past');continue}
+  if(m.missed!=null&&isYes(r[m.missed])){addSkip(skips,'missed',null,info);continue}
+  const pt=parseID(rawPt),cg=parseID(rawCg);
+  if(!cg){addSkip(skips,'nocg',null,info);continue}
+  if(!pt){addSkip(skips,'nopt',null,info);continue}
+  if(!tr){addSkip(skips,'time',cell(rawSched)||'(blank)',info);continue}
+  const key=vid||[cg,pt,date,tr.start,tr.end].join('|');if(seen.has(key)){addSkip(skips,'dup',null,info);continue}seen.add(key);
+  const disc=m.disc==null?'':cell(r[m.disc]).toUpperCase();
+  out.push({patient:pt,caregiver:cg,date,start:tr.start,end:tr.end,absStart:d0+tr.start,absEnd:d0+tr.end,id:vid,disc});
   if(!lo||date<lo)lo=date;if(!hi||date>hi)hi=date}
  return{out,skips,range:lo?[lo,hi]:null,total:data.length}}
 
@@ -331,14 +441,14 @@ async function onFileChosen(kind){
  if(!file){slotState[kind]=null;setCard(kind,'none','No file selected');refreshUploadUI();return}
  slotState[kind]={pending:true,file:file.name};setCard(kind,'checking',`${file.name} · checking…`);refreshUploadUI();
  const token=slotState[kind];
- try{await new Promise(r=>setTimeout(r,20));const res=await validateFile(kind,file);if(slotState[kind]!==token)return;slotState[kind]={ok:true,res,file:file.name};setCard(kind,'ok',`${file.name} · ${res.summary}`)}
+ try{await new Promise(r=>setTimeout(r,20));const res=await validateFile(kind,file);if(slotState[kind]!==token)return;slotState[kind]={ok:true,res,file:file.name,fo:file,day:localISO(new Date())};setCard(kind,'ok',`${file.name} · ${res.summary}`)}
  catch(e){if(slotState[kind]!==token)return;slotState[kind]={ok:false,error:e.message,file:file.name};setCard(kind,'error',e.message.includes(file.name)?e.message:`${file.name}: ${e.message}`)}
  refreshUploadUI(true)}
 function crossCheck(){
  const P=slotState.patients.res,C=slotState.caregivers.res,V=slotState.visits.res;
  const pIds=new Set(P.records.map(p=>p.id)),cIds=new Set(C.records.map(c=>c.id));
  const skips=JSON.parse(JSON.stringify(V.parsed.skips));const ok=[];
- for(const v of V.parsed.out){if(!cIds.has(v.caregiver)){addSkip(skips,'cgunknown',v.caregiver);continue}if(!pIds.has(v.patient)){addSkip(skips,'ptunknown',v.patient);continue}ok.push(v)}
+ for(const v of V.parsed.out){const info={vid:v.id,pt:v.patient,cg:v.caregiver,date:fmtDate(v.date,{month:'numeric',day:'numeric',year:'2-digit'}),sched:fmtClock(v.start)+'–'+fmtClock(v.end%1440)};if(!cIds.has(v.caregiver)){addSkip(skips,'cgunknown',v.caregiver,info);continue}if(!pIds.has(v.patient)){addSkip(skips,'ptunknown',v.patient,info);continue}ok.push(v)}
  let error='';
  if(!ok.length){
   const exP=V.parsed.out[0]?.patient,exC=V.parsed.out[0]?.caregiver;
@@ -376,14 +486,16 @@ async function importFiles(){
  btn.dataset.busy='1';btn.textContent='Checking reports…';
  try{
   // validate again on Load, from the files as they are now
-  for(const k of SLOT_KEYS){const f=$(SLOT_IDS[k][0]).files[0];try{const res=await validateFile(k,f);slotState[k]={ok:true,res,file:f.name};setCard(k,'ok',`${f.name} · ${res.summary}`)}catch(e){slotState[k]={ok:false,error:e.message,file:f?.name};setCard(k,'error',`${f?.name||''}: ${e.message}`)}}
+  for(const k of SLOT_KEYS){const f=$(SLOT_IDS[k][0]).files[0];if(f&&slotState[k]?.ok&&slotState[k].fo===f&&slotState[k].day===localISO(new Date()))continue;try{const res=await validateFile(k,f);slotState[k]={ok:true,res,file:f.name};setCard(k,'ok',`${f.name} · ${res.summary}`)}catch(e){slotState[k]={ok:false,error:e.message,file:f?.name};setCard(k,'error',`${f?.name||''}: ${e.message}`)}}
   u=refreshUploadUI(true);if(!u.ready)return;
   commitData(u.cross);
   $('uploadDialog').close()}
  finally{delete btn.dataset.busy;btn.textContent='Load reports'}}
 function commitData(cross){
  const P=slotState.patients.res,C=slotState.caregivers.res,skipped=cross.total-cross.ok.length;
- applyData({patients:P.records,caregivers:C.records,visits:cross.ok,hasDiscipline:C.hasDiscipline,skipLine:skipped?`${plural(skipped,'visit row')} skipped: ${skipText(cross.skips,false)}`:'',source:'reports',loadedAt:Date.now(),coords:[]})}
+ const past=cross.skips.past?cross.skips.past.n:0,other={...cross.skips};delete other.past;const nOther=skipped-past;
+ const lines=[];if(past)lines.push(`${plural(past,'past visit')} (before today) ignored.`);if(nOther)lines.push(`${plural(nOther,'visit row')} skipped: ${skipText(other,false)}.`);
+ applyData({patients:P.records,caregivers:C.records,visits:cross.ok,hasDiscipline:C.hasDiscipline,skipLine:lines.join(' '),skips:cross.skips,files:{patients:slotState.patients.file,caregivers:slotState.caregivers.file,visits:slotState.visits.file},source:'reports',loadedAt:Date.now(),coords:[]})}
 /* ---------- patient search ---------- */
 function fillPatients(){let search=norm($('search').value);$('patient').value='';let found=search?patients.filter(p=>norm(p.name+' '+p.id+' '+p.zip).includes(search)).slice(0,30):[];let list=$('suggestions');list.innerHTML=found.map(p=>`<button type="button" class="suggestion" data-id="${esc(p.id)}">${esc(p.name)} · ${esc(p.id)}<small>${esc(p.address||'No address in report')}</small></button>`).join('');list.classList.toggle('hidden',!found.length);list.querySelectorAll('button').forEach(b=>b.onclick=()=>{let p=patientsById.get(b.dataset.id);$('patient').value=p.id;$('search').value=p.name+' · '+p.id;list.classList.add('hidden');$('searchWrap').classList.add('has-value');updateTarget()});updateTarget()}
 function target(){return patientsById.get($('patient').value)}
@@ -423,159 +535,156 @@ async function geocode(o,opts={}){
  geoStats.failed++;if(!netErr)coords.set(k,{fail:true,why:'not found'});return null}
 async function pool(items,n,fn){let i=0;const workers=Array.from({length:Math.min(n,items.length)},async()=>{while(i<items.length){const ix=i++;await fn(items[ix],ix)}});await Promise.all(workers)}
 
-/* ---------- matching ---------- */
-const GEOCODE_CAP=150,OSM_FALLBACK_CAP=25,NEAR_WINDOW=120; // minutes before/after the needed window that still count as "around the needed time"
-const COLORS={green:'#22996b',blue:'#217cc4',gray:'#8d99a5'};
-let busy=false,lastSearch=null;
+/* ---------- matching (v61: Today / Tomorrow) ---------- */
+const GEOCODE_CAP=400,NOVISIT_CAP=150,OSM_FALLBACK_CAP=25;
+const COLORS={green:'#22996b',blue:'#217cc4'};
+let busy=false,lastSearch=null,dayOffset=0;
 function maxMiles(){const v=$('maxDistance').value;return v==='any'?Infinity:Number(v)}
 function zoomFor(){const v=$('maxDistance').value;return {1:15,2:14,3:13,5:13,10:12,25:10}[v]||11}
 function distanceLabel(d,approx){return Number.isFinite(d)?(approx?'about '+Math.max(1,Math.round(d))+' mi':d.toFixed(1)+' mi'):'distance unknown'}
-function progress(done,total,label){$('lookupProgress').classList.remove('hidden');let n=total?Math.round(done/total*100):0;$('progressFill').style.width=n+'%';$('progressPercent').textContent=n+'%';$('progressLabel').textContent=label}
-function dayContext(c,S,E){
- const list=visitsByCaregiver.get(c.id)||[],d0=Math.floor(S/1440)*1440,endDay=(Math.floor((E-1)/1440)+1)*1440;
- const overlaps=[];let prev=null,next=null;
- for(const v of list){if(v.absEnd<=d0-1440)continue;if(v.absStart>=endDay+1440)break;
-  if(v.absStart<E&&v.absEnd>S)overlaps.push(v);
-  else if(v.absEnd<=S){if(!prev||v.absEnd>prev.absEnd)prev=v}
-  else if(v.absStart>=E){if(!next||v.absStart<next.absStart)next=v}}
- return{overlaps,prev:prev&&prev.absEnd>=d0?prev:null,next:next&&next.absStart<endDay?next:null,prevW:prev&&S-prev.absEnd<=NEAR_WINDOW?prev:null,nextW:next&&next.absStart-E<=NEAR_WINDOW?next:null}}
-function shiftText(v,withPatient=true){if(!v)return '';const p=patientsById.get(v.patient);return `${fmtClock(v.start)}–${fmtClock(v.end)}${v.end>1440?' (next day)':''}${withPatient&&p?' · '+p.name:''}`}
-function gapText(m){m=Math.round(m);if(m<60)return m+' min';let h=Math.floor(m/60),r=m%60;return h+' h'+(r?' '+r+' min':'')}
-function endClock(v){return fmtClock(v.end)+(v.end>1440?' (next day)':'')}
+/* v61: the loading overlay on the map is THE progress indicator (the Find button shows a tiny copy) */
+let searchStop=false;
+const nextFrame=()=>new Promise(r=>requestAnimationFrame(()=>setTimeout(r,0)));
+function loadingStart(){const o=$('mapLoading');o.classList.remove('hidden','is-error','fade','has-pin');$('mlTitle').textContent='Locating the patient…';$('mlStop').classList.add('hidden');progress(0,'')}
+function progress(pct,sub){pct=Math.max(0,Math.min(100,Math.round(pct)));$('mlPct').textContent=pct+'%';$('mlFill').style.width=pct+'%';if(sub!=null)$('mlSub').textContent=sub;$('find').innerHTML=`<span class="btn-spin" aria-hidden="true"></span>Searching… ${pct}%`}
+function loadingDone(){const o=$('mapLoading');o.classList.add('fade');setTimeout(()=>{if(o.classList.contains('fade'))o.classList.add('hidden')},260)}
+function loadingError(title,detail){const o=$('mapLoading');o.classList.remove('hidden','fade','has-pin');o.classList.add('is-error');$('mlErrTitle').textContent=title;$('mlErrDetail').textContent=detail||'';setTimeout(()=>$('mlClose').focus({preventScroll:true}),30)}
+function loadingClose(){const o=$('mapLoading');o.classList.add('hidden');o.classList.remove('is-error')}
+const WD=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+function coverageDay(){return dayNum(localISO(new Date()))+dayOffset}
+function dayName(D,long){return fmtDate(isoFromDay(D),long?{weekday:'short',month:'short',day:'numeric'}:{weekday:'short',month:'short',day:'numeric'})}
+// clock relative to the coverage day: "8:00 PM (Tue)" when it is on another day
+function clockAt(abs,ctx){const day=Math.floor(abs/1440),t=((abs%1440)+1440)%1440;return fmtClock(t)+(day===ctx.D?'':' ('+WD[new Date(day*86400000).getUTCDay()]+')')}
+function visitsOnDay(c,D){const S=D*1440,E=S+1440,out=[];for(const v of visitsByCaregiver.get(c.id)||[]){if(v.absStart>=E)break;if(v.absEnd>S)out.push(v)}return out}
+const titleCase=s=>String(s||'').toLowerCase().replace(/\b[a-z]/g,m=>m.toUpperCase());
+function areaOf(rec){if(!rec)return '';return [titleCase(rec.city),rec.zip].filter(Boolean).join(' ')}
 function distInfo(rec,ctx){if(!rec)return null;const k=geoKey(rec);if(k===ctx.pKey)return{d:0,exact:true};const pt=coords.get(k);if(hasPoint(pt))return{d:miles(ctx.tp,pt),exact:true,pt};const zi=zipInfo(rec.zip);return zi?{d:miles(ctx.tp,zi),exact:false}:null}
 const pat=v=>v&&patientsById.get(v.patient);
 async function findWithLocations(){
  if(busy)return;let p=target();const stat=$('searchStatus');stat.className='message muted';
  if(!patients.length||!caregivers.length){stat.className='message error';stat.textContent='Upload the three reports first (Step 1).';return}
  if(!p){stat.className='message error';stat.textContent='Select a patient from the search list first.';return}
- const timed=!$('ignoreTime').checked;let D=null,S=null,E=null;
- if(timed){const date=$('date').value;if(!date){stat.className='message error';stat.textContent='Select the date coverage is needed.';return}
-  let s=mins($('start').value),e=mins($('end').value);if(!Number.isFinite(s)||!Number.isFinite(e)){stat.className='message error';stat.textContent='Select a start and end time.';return}
-  if(e<=s)e+=1440;D=dayNum(date);S=D*1440+s;E=D*1440+e}
+ const D=coverageDay();
  if(dataSource!=='sample'&&!$('demoConsent').checked){stat.className='message error';stat.textContent='Open Upload reports and tick the address lookup confirmation.';return}
- busy=true;$('find').disabled=true;stat.textContent='';
+ busy=true;searchStop=false;$('find').disabled=true;stat.textContent='';
  const notes=[];
  try{
-  progress(0,1,'Locating selected patient…');
+  showView('map');loadingStart();progress(3,'Finding the patient\'s address');
+  if(window.matchMedia('(max-width: 900px)').matches&&!document.querySelector('.mapbox').classList.contains('is-fullscreen'))document.querySelector('.mapbox').scrollIntoView({behavior:'smooth',block:'start'});
   const tp=await geocode(p);
-  if(!tp){$('mapStatus').textContent='Patient address not located';clearResults('Could not locate the selected patient\'s address, so no caregivers were searched. Check the street, city and ZIP in the Patients report.');stat.className='message error';stat.textContent='Address tried: '+(fullAddr(...Object.values(geoParts(p)))||'(no street address in report)');return}
-  updateTarget();map.setView([tp.lat,tp.lng],zoomFor());
+  if(!tp){const tried=fullAddr(...Object.values(geoParts(p)))||'(no street address in report)';$('mapStatus').textContent='Patient address not located';clearResults('Could not locate the selected patient\'s address, so no caregivers were searched. Check the street, city and ZIP in the Patients report.');stat.className='message error';stat.textContent='Address tried: '+tried;loadingError('Couldn\'t find this patient\'s address on the map',`Address tried: ${tried}. Check the street, city and ZIP in the Patients report. No caregivers were searched.`);return}
+  updateTarget();map.setView([tp.lat,tp.lng],zoomFor(),{animate:false});$('mapLoading').classList.add('has-pin');
   const max=maxMiles(),pKey=geoKey(p);
-  progress(0,1,`Checking all ${fmtN(caregivers.length)} caregivers…`);
-  // 1) every caregiver: the places that matter (home, and visit locations), prefiltered by ZIP-centroid distance
+  $('mlTitle').textContent='Locating nearby caregivers…';progress(8,`Checking schedules · 0 of ${fmtN(caregivers.length)} caregivers`);await nextFrame();
+  // 1) every caregiver: home + that day's visit locations, prefiltered by ZIP-centroid distance
   const lbCache=new Map();
   const lbOf=rec=>{if(!rec||!geoParts(rec).street)return null;const k=geoKey(rec);if(lbCache.has(k))return lbCache.get(k);let o=null;if(k===pKey)o={key:k,rec,lb:0};else{const zi=zipInfo(rec.zip);if(zi)o={key:k,rec,lb:Math.max(0,miles(tp,zi)-zi.r*1.3-0.75)}}lbCache.set(k,o);return o};
   const maybeNear=rec=>{const o=lbOf(rec);return o&&o.lb<=max?o:null};
-  const cands=[],need=new Map(),later=new Map();let noLoc=0;
+  const cands=[],need=new Map();let noLoc=0;
+  // what to map first: 0 = patient homes with visits that day (the core of this tool), 1 = homes of caregivers with visits in the report, 2 = homes of everyone else
+  const addNeed=(rec,tier)=>{const o=maybeNear(rec);if(!o)return false;const cur=need.get(o.key);if(!cur||tier<cur.tier)need.set(o.key,{...o,tier});return true};
+  let ci=0;
   for(const c of caregivers){
-   let item={c};
-   if(timed){const dc=dayContext(c,S,E);Object.assign(item,dc);
-    const locs=[c,pat(dc.prevW),pat(dc.nextW),...dc.overlaps.map(pat)].filter(Boolean);
-    if(!locs.some(r=>lbOf(r))){noLoc++;continue}
-    const nearLocs=locs.map(maybeNear).filter(Boolean);if(!nearLocs.length)continue;
-    nearLocs.forEach(o=>need.set(o.key,o));
-    dc.overlaps.forEach(v=>{const o=lbOf(pat(v));if(o&&!need.has(o.key))later.set(o.key,o)});
-    cands.push(item)}
-   else{const locs=[c,...[...(visitPatientsByCaregiver.get(c.id)||[])].map(id=>patientsById.get(id))].filter(Boolean);
-    if(!locs.some(r=>lbOf(r))){noLoc++;continue}
-    const nearLocs=locs.map(maybeNear).filter(Boolean);if(!nearLocs.length)continue;
-    nearLocs.forEach(o=>need.set(o.key,o));cands.push(item)}}
-  // 2) street-geocode only those, nearest first; then the far cases of busy caregivers (for their "X mi away" line)
-  for(const k of need.keys())later.delete(k);
-  const nearList=[...need.values()].sort((a,b)=>a.lb-b.lb),farList=[...later.values()].sort((a,b)=>a.lb-b.lb);
-  const todo=[...nearList,...farList].slice(0,GEOCODE_CAP),skippedByCap=nearList.length-Math.min(nearList.length,GEOCODE_CAP);
+   if(++ci%250===0){progress(8+12*ci/caregivers.length,`Checking schedules · ${fmtN(ci)} of ${fmtN(caregivers.length)} caregivers`);await nextFrame()}
+   const day=visitsOnDay(c,D),vlocs=day.map(pat).filter(Boolean);
+   if(!lbOf(c)&&!vlocs.some(r=>lbOf(r))){noLoc++;continue}
+   let any=addNeed(c,visitsByCaregiver.has(c.id)?1:2);for(const r of vlocs)any=addNeed(r,0)||any;
+   if(any)cands.push({c,day})}
+  // 2) street-geocode only those: by tier, nearest first, capped so a dense area stays quick
+  const byTier=t=>[...need.values()].filter(o=>o.tier===t).sort((a,b)=>a.lb-b.lb);
+  const t0=byTier(0),t1=byTier(1),t2=byTier(2);
+  const nearList=[...t0,...t1.slice(0,GEOCODE_CAP)],todo=[...nearList,...t2.slice(0,NOVISIT_CAP)];
+  const capActive=Math.max(0,t1.length-GEOCODE_CAP),capIdle=Math.max(0,t2.length-NOVISIT_CAP);
   let done=0,lastRender=0;const budget={n:OSM_FALLBACK_CAP};
-  const ctx={p,tp,pKey,max,timed,D,S,E};lastSearch={cands,ctx};
-  await pool(todo,6,async(loc)=>{if(!coords.has(loc.key))await geocode(loc.rec,{budget:loc.lb<=max?budget:{n:0}});
-   done++;progress(done,todo.length,`Locating ${fmtN(done)} of ${fmtN(todo.length)} addresses near the patient…`);
+  const ctx={p,tp,pKey,max,D,isToday:D===dayNum(localISO(new Date()))};lastSearch={cands,ctx};
+  const mapping=()=>`Mapping ${fmtN(done)} of ${fmtN(todo.length)} addresses near the patient`;
+  progress(20,todo.length?mapping():'Nothing to map');$('mlStop').classList.toggle('hidden',todo.length<12);
+  await pool(todo,8,async(loc)=>{if(searchStop)return;if(!coords.has(loc.key))await geocode(loc.rec,{budget:loc.lb<=max?budget:{n:0}});
+   done++;progress(20+77*done/todo.length,mapping());
    if(done-lastRender>=25){lastRender=done;render(true)}});
-  const failed=nearList.slice(0,GEOCODE_CAP).filter(l=>!hasPoint(coords.get(l.key))).length;
-  progress(1,1,'Showing matches…');
-  render(false);
-  if(skippedByCap)notes.push(`${fmtN(skippedByCap)} farther possible locations were not looked up (limit ${GEOCODE_CAP} per search). Pick a smaller distance to check them all.`);
-  if(failed)notes.push(`${plural(failed,'address')} near the patient couldn't be located on the map and ${failed===1?'is':'are'} not shown.`);
+  const failed=nearList.filter(l=>!hasPoint(coords.get(l.key))&&!(searchStop&&!coords.has(l.key))).length;
+  if(searchStop&&done<todo.length)notes.push(`Stopped early: ${plural(todo.length-done,'address','addresses')} not looked up, so some caregivers may be missing.`);
+  $('mlStop').classList.add('hidden');progress(99,'Drawing results');await nextFrame();
+  render(false);loadingDone();
+  if(capActive)notes.push(`${plural(capActive,'caregiver home')} at the edge of the area ${capActive===1?'was':'were'} not mapped (limit ${GEOCODE_CAP} per search). Pick a smaller distance to check them all.`);
+  if(capIdle)notes.push(`${plural(capIdle,'more caregiver')} with no visits in this Visit Report live in the area but ${capIdle===1?'was':'were'} not mapped (limit ${NOVISIT_CAP}). Running the Caregivers report with Status = Active keeps this list short.`);
+  if(failed)notes.push(`${plural(failed,'address','addresses')} near the patient couldn't be located on the map and ${failed===1?'is':'are'} not shown.`);
   if(noLoc)notes.push(`${plural(noLoc,'caregiver')} not checked: no usable street address or ZIP code (or outside NY/NJ/CT).`);
-  if(timed&&visitRange&&(isoFromDay(D)<visitRange[0]||isoFromDay(D)>visitRange[1]))notes.push(`Heads up: the Visit Report covers ${fmtDate(visitRange[0],{month:'numeric',day:'numeric'})}–${fmtDate(visitRange[1],{month:'numeric',day:'numeric'})}, so nobody's schedule for ${fmtDate(isoFromDay(D))} is known.`);
+  if(visitRange&&(isoFromDay(D)<visitRange[0]||isoFromDay(D)>visitRange[1]))notes.push(`Heads up: the Visit Report has no visits on ${dayName(D)}, so nobody shows as scheduled that day. Rerun it with Visit Date From = today and To = tomorrow.`);
   if(osmBlocked)notes.push('The backup address service is limiting requests right now; some addresses were skipped.');
   stat.className='message muted';stat.textContent=notes.join('\n');saveData();
- }catch(e){stat.className='message error';stat.textContent='Search could not finish: '+e.message;$('summary').textContent='Search could not finish.'}
- finally{busy=false;$('find').disabled=false;setTimeout(()=>{$('lookupProgress').classList.add('hidden')},900)}}
+ }catch(e){stat.className='message error';stat.textContent='Search could not finish: '+e.message;$('summary').textContent='Search could not finish.';loadingError('Search could not finish',String(e&&e.message||e)+'. Try again; if it keeps happening, reload the page.')}
+ finally{busy=false;searchStop=false;$('find').disabled=false;$('find').textContent='Find caregivers →'}}
 
-/* Classify one caregiver for the needed window. Returns null when nothing about them is near the patient. */
-function classifyTimed(x,ctx){
- const {max,S,E}=ctx,home=distInfo(x.c,ctx),isNear=di=>di&&di.exact&&di.d<=max;
- const ov=x.overlaps.map(v=>({v,di:distInfo(pat(v),ctx)}));
- const ovNear=ov.filter(o=>isNear(o.di)),ovFar=ov.filter(o=>!isNear(o.di));
- const prevDi=x.prevW?distInfo(pat(x.prevW),ctx):null,nextDi=x.nextW?distInfo(pat(x.nextW),ctx):null;
- if(ov.length&&!ovFar.length){const best=ovNear.sort((a,b)=>a.di.d-b.di.d)[0],until=ov.reduce((m,o)=>o.v.absEnd>m.absEnd?o.v:m,ov[0].v);
-  return{cat:'green',sub:'onshift',rank:2,sortKey:until.absEnd,d:best.di.d,pt:best.di.pt,loc:pat(best.v),visit:best.v,until}}
- if(ov.length){const far=ovFar[0];const nearPlace=isNear(home)?{rec:x.c,di:home,home:true}:ovNear[0]?{rec:pat(ovNear[0].v),di:ovNear[0].di}:isNear(prevDi)?{rec:pat(x.prevW),di:prevDi}:isNear(nextDi)?{rec:pat(x.nextW),di:nextDi}:null;
-  if(!nearPlace)return null;
-  return{cat:'gray',rank:5,sortKey:nearPlace.di.d,d:nearPlace.di.d,pt:nearPlace.di.pt,loc:nearPlace.rec,atHome:!!nearPlace.home,far:far.v,farDi:far.di}}
- if(x.prevW&&isNear(prevDi))return{cat:'green',sub:'finished',rank:1,sortKey:prevDi.d,d:prevDi.d,pt:prevDi.pt,loc:pat(x.prevW),visit:x.prevW};
- if(x.nextW&&isNear(nextDi))return{cat:'green',sub:'later',rank:3,sortKey:x.nextW.absStart*1000+nextDi.d,d:nextDi.d,pt:nextDi.pt,loc:pat(x.nextW),visit:x.nextW};
- if(isNear(home))return{cat:'blue',rank:4,sortKey:home.d,d:home.d,pt:home.pt,loc:x.c,atHome:true};
+/* Classify one caregiver for the coverage day. Green = a scheduled visit that day at a patient within the radius; blue = lives within the radius. */
+function nowAbs(){const n=new Date();return dayNum(localISO(n))*1440+n.getHours()*60+n.getMinutes()}
+function visitState(v,ctx){if(!ctx.isToday)return '';const now=nowAbs();return v.absEnd<=now?'ended':v.absStart<=now?'on':'later'}
+function classifyDay(x,ctx){
+ const {max}=ctx;let best=null;const pri={on:0,later:1,ended:2,'':0};
+ const better=(a,b)=>{const pa=pri[visitState(a.v,ctx)],pb=pri[visitState(b.v,ctx)];if(pa!==pb)return pa<pb;if(pa===1&&a.v.absStart!==b.v.absStart)return a.v.absStart<b.v.absStart;return a.di.d<b.di.d};
+ for(const v of x.day){const di=distInfo(pat(v),ctx);if(di&&di.exact&&di.d<=max){const c={v,di};if(!best||better(c,best))best=c}}
+ if(best)return{cat:'green',d:best.di.d,pt:best.di.pt,loc:pat(best.v),visit:best.v};
+ const home=distInfo(x.c,ctx);
+ if(home&&home.exact&&home.d<=max)return{cat:'blue',d:home.d,pt:home.pt,loc:x.c,atHome:true};
  return null}
-function classifyAnyTime(x,ctx){
- const {max}=ctx;let best=null;
- const consider=(rec,type)=>{const di=distInfo(rec,ctx);if(!di||!di.exact||di.d>max)return;if(!best||di.d<best.d||(di.d===best.d&&type==='visit'))best={cat:type==='visit'?'green':'blue',rank:type==='visit'?1:2,d:di.d,pt:di.pt,loc:rec,atHome:type==='home'}};
- consider(x.c,'home');for(const id of visitPatientsByCaregiver.get(x.c.id)||[])consider(patientsById.get(id),'visit');
- if(best)best.sortKey=best.d;return best}
 function render(partial,keepView){
- if(!lastSearch)return 0;const {cands,ctx}=lastSearch,{p,tp,timed}=ctx;
- const list=[];
- for(const x of cands){const r=timed?classifyTimed(x,ctx):classifyAnyTime(x,ctx);if(r&&hasPoint(r.pt||(r.d===0?tp:null))){r.pt=r.pt||tp;list.push({...x,...r})}}
- list.sort((a,b)=>timed?(a.rank-b.rank||a.sortKey-b.sortKey||a.d-b.d):(a.d-b.d||a.rank-b.rank));
- lastSearch.list=list;const showGray=$('showGray').checked;
- const visible=list.filter(x=>x.cat!=='gray'||showGray),shown=visible.slice(0,150);
+ if(!lastSearch)return 0;const {cands,ctx}=lastSearch,{p,tp}=ctx;
+ const list=[],disc=hasDiscipline?$('discFilter').value:'';let discHidden=0;
+ for(const x of cands){const r=classifyDay(x,ctx);if(r&&hasPoint(r.pt||(r.d===0?tp:null))){if(disc&&!(x.c.discs||[]).includes(disc)){discHidden++;continue}r.pt=r.pt||tp;list.push({...x,...r})}}
+ list.sort((a,b)=>a.d-b.d||(a.cat==='green'?0:1)-(b.cat==='green'?0:1));
+ lastSearch.list=list;
+ const SHOW_CAP=500,shown=list.slice(0,SHOW_CAP);lastSearch.shownN=shown.length;
  markers.clearLayers();paths.clearLayers();$('results').innerHTML='';
+ const frag=document.createDocumentFragment();
  for(const x of shown){
-  const color=COLORS[x.cat];x.marker=pin(x.pt.lat,x.pt.lng,color,caregiverPopup(x,ctx));
+  x.marker=pin(x.pt.lat,x.pt.lng,COLORS[x.cat],()=>caregiverPopup(x,ctx));
   const el=document.createElement('div');el.className='result cat-'+x.cat;el.innerHTML=resultHtml(x,ctx);
   el.onclick=e=>{if(e.target.closest('a,button'))return;focusMarker(x)};
-  $('results').appendChild(el)}
+  frag.appendChild(el)}
+ $('results').appendChild(frag);
  addTargetPin(p,tp);
- const cnt={green:0,blue:0,gray:0};list.forEach(x=>cnt[x.cat]++);
+ const cnt={green:0,blue:0};list.forEach(x=>cnt[x.cat]++);
  const dist=Number.isFinite(ctx.max)?`within ${ctx.max} mi`:'at any distance';
- $('count').textContent=`${plural(visible.length,'caregiver')}${partial?' so far':''}`;
- if(timed)$('summary').innerHTML=`${esc(fmtDate(isoFromDay(ctx.D),{weekday:'short',month:'short',day:'numeric'}))}, ${esc(fmtClock(ctx.S%1440))}–${esc(fmtClock(ctx.E%1440))} · ${esc(dist)} (straight-line):<br><span class="legend-green">${cnt.green} on a shift nearby</span> · <span class="legend-blue">${cnt.blue} live nearby with no scheduled visit during this time</span> · <span class="legend-gray">${cnt.gray} live nearby but busy elsewhere${showGray?'':' (hidden)'}</span><br><span class="muted">From the Visit Report schedule only. Travel time is not checked; call to confirm.</span>`;
- else $('summary').textContent=`${plural(list.length,'caregiver')} ${dist} by home address or a scheduled visit location (any date), nearest first. Schedules were not checked. Distances are straight-line.`;
- if(!visible.length&&!partial)$('results').insertAdjacentHTML('beforeend',`<div class="muted" style="margin-top:10px">No caregivers found ${esc(dist)}${cnt.gray&&!showGray?' (busy-elsewhere caregivers are hidden)':''}. Try a larger distance${timed?' or another time':''}.</div>`);
- if(visible.length>shown.length)$('results').insertAdjacentHTML('beforeend',`<div class="mini">Showing the first ${shown.length} of ${fmtN(visible.length)}.</div>`);
- updateLegend(timed);renderChips(list,ctx);refreshTabCounts();
+ $('count').textContent=`${plural(list.length,'caregiver')}${partial?' so far':''}`;
+ $('summary').innerHTML=`<b>${esc(dayName(ctx.D))}</b> · ${esc(dist)}: <span class="legend-green">${cnt.green} scheduled nearby</span> · <span class="legend-blue">${cnt.blue} live nearby</span>${disc?` · <span class="muted">${esc(disc)} only (${plural(discHidden,'other')} hidden)</span>`:''}<br><span class="muted">From the Visit Report schedule. Distances are straight-line. Call to confirm.</span>`;
+ if(!list.length&&!partial)$('results').insertAdjacentHTML('beforeend',`<div class="muted" style="margin-top:10px">No caregivers found ${esc(dist)}. Try a larger distance${disc?' or All disciplines':''}.</div>`);
+ if(list.length>shown.length){const m=`Showing the nearest ${fmtN(shown.length)} of ${fmtN(list.length)}. Pick a smaller distance to see fewer.`;$('results').insertAdjacentHTML('beforeend',`<div class="mini">${m}</div>`);$('summary').insertAdjacentHTML('beforeend',`<br><span class="muted">${m}</span>`)}
+ renderChips(list,ctx);refreshTabCounts();
  if(!partial&&!keepView)map.setView([tp.lat,tp.lng],zoomFor(),{animate:false});
  return list.length}
 function focusMarker(x){showView('map');setTimeout(()=>{map.invalidateSize();map.setView([x.pt.lat,x.pt.lng],Math.max(map.getZoom(),14),{animate:false});setTimeout(()=>x.marker.openPopup(),60)},120)}
-function updateLegend(timed){$('legendGreen').textContent=timed?'On a shift nearby':'Has visits nearby';$('legendBlue').textContent=timed?'Lives nearby, no visit at this time':'Lives nearby';$('legendGrayItem').classList.toggle('hidden',!timed)}
 function phoneLinks(c){if(!c.phones||!c.phones.length)return '<span class="muted">No phone in report</span>';return c.phones.map(x=>{const t=String(x.v).replace(/[^\d+]/g,'');return `<a class="tel" href="tel:${esc(t)}">${esc(x.v)}</a>${c.phones.length>1?` <span class="muted">${esc(x.label)}</span>`:''}`}).join(' · ')}
-function statusLine(x,ctx){
- const dl=distanceLabel(x.d);
- if(!ctx.timed){if(x.cat==='green'){const nv=nextVisitWith(x.c,x.loc.id);return `Has visits ${dl} away with ${esc(x.loc.name)}${x.loc.id===ctx.p.id?' (this patient)':''} · ${plural(nv.n,'visit')} in report${nv.next?`, next ${esc(fmtDate(nv.next.date))} ${esc(fmtClock(nv.next.start))}`:''}`}return `Lives ${dl} away · schedule not checked`}
- if(x.cat==='green'&&x.sub==='finished'){const nx=x.next;return `Scheduled to finish ${esc(endClock(x.visit))}, ${dl} away · `+(nx?`then no visit for ${gapText(nx.absStart-x.visit.absEnd)} (next at ${esc(fmtClock(nx.start))})`:'no later visit that day')}
- if(x.cat==='green'&&x.sub==='onshift')return `Scheduled on a shift ${dl} away until ${esc(endClock(x.until))} (overlaps the needed time)`;
- if(x.cat==='green'&&x.sub==='later')return `Scheduled to start a visit ${dl} away at ${esc(fmtClock(x.visit.start))}, ${gapText(x.visit.absStart-ctx.E)} after the needed time · no scheduled visit during this time`;
- if(x.cat==='blue'){let s=`Lives ${dl} away · no scheduled visit during this time`;return s}
- if(x.cat==='gray'){const fd=!x.farDi?'an unknown distance':(!x.farDi.exact&&x.farDi.d<=ctx.max+1)?'an unmapped location':distanceLabel(x.farDi.d,!x.farDi.exact)+' away';return `${x.atHome?'Lives':'Near'} ${dl} away, but scheduled at a case ${fd} ${esc(fmtClock(x.far.start))}–${esc(endClock(x.far))}`}
- return ''}
-function dayLines(x,ctx){if(!ctx.timed)return '';const l=[];if(x.prev&&!(x.cat==='green'&&x.sub==='finished'))l.push(`Earlier: ${esc(shiftText(x.prev))}`);if(x.next&&!(x.cat==='green'&&x.sub==='later'))l.push(`Next: ${esc(shiftText(x.next))}`);return l.join('<br>')}
-const CAT_PILL={green:['Shift nearby',''],blue:['Lives nearby','blue'],gray:['Busy elsewhere','none']};
+const isHere=(x,ctx)=>!x.atHome&&x.loc&&x.loc.id===ctx.p.id;
+const rng=(v,ctx)=>`${clockAt(v.absStart,ctx)} – ${clockAt(v.absEnd,ctx)}`;
+function headline(x,ctx){const dl=distanceLabel(x.d);
+ if(x.cat==='green'){const v=x.visit,st=visitState(v,ctx),where=isHere(x,ctx)?'with this patient':`${dl} away`;
+  if(st==='on')return `On shift ${isHere(x,ctx)?'with this patient':'nearby'} until ${clockAt(v.absEnd,ctx)}${isHere(x,ctx)?'':' · '+dl}`;
+  if(st==='later')return `Next scheduled: ${clockAt(v.absStart,ctx)} · ${where}`;
+  if(st==='ended')return `Scheduled ${where} earlier · ended ${clockAt(v.absEnd,ctx)}`;
+  return `Scheduled ${where} · ${rng(v,ctx)}`}
+ let h=`Lives ${dl} away`;if(ctx.isToday){const on=x.day.find(v=>visitState(v,ctx)==='on'),nx=x.day.find(v=>visitState(v,ctx)==='later');if(on)h+=` · on shift elsewhere until ${clockAt(on.absEnd,ctx)}`;else if(nx)h+=` · next scheduled ${clockAt(nx.absStart,ctx)}`}return h}
+// one line per visit that day: time range · distance from the selected patient · area
+function visitWhere(v,ctx){const r=pat(v),di=distInfo(r,ctx);if(r&&r.id===ctx.p.id)return 'this patient';return [di?(di.d===0?'0.0 mi':distanceLabel(di.d,!di.exact)):'',areaOf(r)].filter(Boolean).join(' · ')}
+function visitStatus(v,ctx){const st=visitState(v,ctx);return st==='on'?`On shift now · until ${clockAt(v.absEnd,ctx)}`:st==='later'?`Starts ${clockAt(v.absStart,ctx)}`:st==='ended'?`Ended ${clockAt(v.absEnd,ctx)}`:''}
+function visitLine(v,ctx){const s=visitStatus(v,ctx);return `${rng(v,ctx)} · ${visitWhere(v,ctx)}${s?' · '+s:''}`}
+function scheduleHtml(x,ctx){const head=`Schedule on ${esc(dayName(ctx.D))}:`;if(!x.day.length)return `<div class="sched"><span class="sched-h">${head}</span> <span class="muted">No scheduled visits on this date</span></div>`;
+ return `<div class="sched"><span class="sched-h">${head}</span><ul>${x.day.map(v=>{const st=visitState(v,ctx),s=visitStatus(v,ctx);return `<li${x.visit===v?' class="sched-near"':''}><span class="vt">${esc(rng(v,ctx))}</span> · ${esc(visitWhere(v,ctx))}${s?` <span class="vs vs-${st}">${esc(s)}</span>`:''}</li>`}).join('')}</ul></div>`}
+function scheduleText(x,ctx){return `Schedule on ${dayName(ctx.D)}: `+(x.day.length?x.day.map(v=>visitLine(v,ctx)).join('; '):'no scheduled visits on this date')}
+const CAT_PILL={green:['Scheduled nearby',''],blue:['Lives nearby','blue']};
+function discTags(c){return hasDiscipline&&c.discs&&c.discs.length?' '+c.discs.map(d=>`<span class="disc-tag">${esc(d)}</span>`).join(''):''}
 function resultHtml(x,ctx){
- const pill=ctx.timed?CAT_PILL[x.cat]:(x.cat==='green'?['Visit','']:['Home','blue']);const dl=dayLines(x,ctx);
- return `<div style="display:flex;justify-content:space-between;gap:10px"><b>${esc(x.c.name)} <span class="muted" style="font-weight:500">· ${esc(x.c.id)}</span></b><span class="pill ${pill[1]}">${pill[0]}</span></div><div class="details"><div class="status-line">${statusLine(x,ctx)}</div>${dl?`<div>${dl}</div>`:''}<div class="contact-line">${phoneLinks(x.c)}${dirLink(x,ctx)?' · '+dirLink(x,ctx):''}</div></div>`}
-function visitsWith(c,pid){return (visitsByCaregiver.get(c.id)||[]).filter(v=>v.patient===pid)}
-function nextVisitWith(c,pid){const list=visitsWith(c,pid);const today=dayNum(new Date().toISOString().slice(0,10))*1440;return{n:list.length,next:list.find(v=>v.absEnd>=today)||list[list.length-1]}}
+ const pill=isHere(x,ctx)?['This patient','']:CAT_PILL[x.cat];
+ return `<div class="result-top"><b>${esc(x.c.name)} <span class="muted" style="font-weight:500">· ${esc(x.c.id)}</span>${discTags(x.c)}</b><span class="pill ${pill[1]}">${pill[0]}</span></div><div class="details"><div class="status-line">${esc(headline(x,ctx))}</div>${scheduleHtml(x,ctx)}<div class="contact-line">${phoneLinks(x.c)}${dirLink(x,ctx)?' · '+dirLink(x,ctx):''}</div></div>`}
 function caregiverPopup(x,ctx){
  const c=x.c,row=(label,value,html)=>`<div class="popup-row"><strong>${esc(label)}</strong><span>${html?value:esc(value||'Not provided')}</span></div>`;
- const where=x.atHome?row('Home',c.address):row('Visit at',`${x.loc.name} · ${x.loc.address}`);
- const dl=dayLines(x,ctx);
- const head=ctx.timed?{green:'On a shift nearby',blue:'Lives nearby',gray:'Lives nearby, busy elsewhere'}[x.cat]:(x.cat==='green'?'Has visits nearby':'Lives nearby');
- return `<div class="caregiver-popup"><div class="popup-name">${esc(c.name)}</div><div class="popup-distance">${esc(head)} · ${esc(distanceLabel(x.d))} from selected patient (straight-line)</div><div class="popup-status">${statusLine(x,ctx)}</div>${row('Code',c.id)}${where}${row('Phone',phoneLinks(c),true)}${dirLink(x,ctx)?row('Map',dirLink(x,ctx)+' <span class="muted">opens Google Maps</span>',true):''}${hasDiscipline?row('Discipline',c.discipline||'Not available'):''}${dl?`<div class="popup-schedule">${dl}</div>`:''}</div>`}
-function refreshTabCounts(){const n=$('results').querySelectorAll('.result').length;$('mapTabCount').textContent=n?'('+n+')':'';$('listTabCount').textContent=n?'('+n+')':''}
-function showView(view){const list=view==='list';$('mapTab').classList.toggle('active',!list);$('listTab').classList.toggle('active',list);$('mapTab').setAttribute('aria-selected',String(!list));$('listTab').setAttribute('aria-selected',String(list));$('map').classList.toggle('tab-hidden',list);$('mapFoot').classList.toggle('tab-hidden',list);$('mapTools').classList.toggle('tab-hidden',list);document.querySelector('.results').classList.toggle('tab-hidden',!list);if(!list)setTimeout(()=>map?.invalidateSize(),50)}
+ return `<div class="caregiver-popup"><div class="popup-name">${esc(c.name)}</div><div class="popup-distance">${esc(headline(x,ctx))}${isHere(x,ctx)?'':' (straight-line)'}</div>${scheduleHtml(x,ctx)}${row('Code',c.id)}${hasDiscipline?row('Discipline',(c.discs||[]).join(', ')||'Not in report'):''}${row('Home',c.address)}${row('Phone',phoneLinks(c),true)}${dirLink(x,ctx)?row('Map',dirLink(x,ctx)+' <span class="muted">opens Google Maps</span>',true):''}</div>`}
+function refreshTabCounts(){const n=$('results').querySelectorAll('.result').length,tot=lastSearch&&lastSearch.list?lastSearch.list.length:n,t=n?(tot>n?`(${fmtN(n)} of ${fmtN(tot)})`:`(${fmtN(n)})`):'';$('mapTabCount').textContent=t;$('listTabCount').textContent=t}
+function exitFullMap(){const b=document.querySelector('.mapbox');if(!b||!b.classList.contains('is-fullscreen'))return;b.classList.remove('is-fullscreen');$('fullMap').textContent='⛶';$('fullMap').title='Full screen map';$('fullMap').setAttribute('aria-label','Full screen map');document.body.style.overflow='';setTimeout(()=>map?.invalidateSize(),80)}
+function showView(view){const list=view==='list';if(list)exitFullMap();$('mapTab').classList.toggle('active',!list);$('listTab').classList.toggle('active',list);$('mapTab').setAttribute('aria-selected',String(!list));$('listTab').setAttribute('aria-selected',String(list));$('map').classList.toggle('tab-hidden',list);$('mapFoot').classList.toggle('tab-hidden',list);$('mapTools').classList.toggle('tab-hidden',list);document.querySelector('.results').classList.toggle('tab-hidden',!list);if(!list)setTimeout(()=>map?.invalidateSize(),50)}
 
 
-/* ---------- v59 extras: sample data, saved-for-today, freshness, chips, call list ---------- */
-let dataSource=null,loadedAt=null,skipLine='';
+/* ---------- v60 extras: sample data, saved-for-today, freshness, chips, call list ---------- */
+let dataSource=null,loadedAt=null,skipLine='',dataSkips=null,dataFiles=null;
 const localISO=d=>`${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;
 const SAMPLE_PLACES=[["4211 14th Ave", "Brooklyn", "NY", "11219", 40.637488, -73.985873], ["4305 Fort Hamilton Pkwy", "Brooklyn", "NY", "11219", 40.641151, -73.993394], ["4715 18th Ave", "Brooklyn", "NY", "11204", 40.629301, -73.979914], ["1265 43rd St", "Brooklyn", "NY", "11219", 40.638903, -73.989355], ["4207 18th Ave", "Brooklyn", "NY", "11218", 40.631451, -73.975535], ["5822 16th Ave", "Brooklyn", "NY", "11204", 40.625883, -73.990972], ["4006 18th Ave", "Brooklyn", "NY", "11218", 40.632611, -73.973361], ["1031 59th St", "Brooklyn", "NY", "11219", 40.633038, -74.003805], ["5108 4th Ave", "Brooklyn", "NY", "11220", 40.645863, -74.013306], ["500 25th St", "Brooklyn", "NY", "11232", 40.659417, -73.996386], ["975 E 16th St", "Brooklyn", "NY", "11230", 40.625906, -73.960507], ["350 5th Ave", "New York", "NY", "10118", 40.747851, -73.985076], ["41-17 Main St", "Flushing", "NY", "11355", 40.757597, -73.82909], ["1 E 161st St", "Bronx", "NY", "10451", 40.829291, -73.928544], ["620 Atlantic Ave", "Brooklyn", "NY", "11217", 40.683435, -73.975876], ["10 Richmond Ter", "Staten Island", "NY", "10301", 40.64304, -74.075859], ["280 Grove St", "Jersey City", "NJ", "07302", 40.718075, -74.043717], ["2300 Southern Blvd", "Bronx", "NY", "10460", 40.851618, -73.882087], ["1 Raymond Plz W", "Newark", "NJ", "07102", 40.734097, -74.165492], ["209 Joralemon St", "Brooklyn", "NY", "11201", 40.692568, -73.990738], ["200 Willoughby Ave", "Brooklyn", "NY", "11205", 40.692157, -73.962649], ["451 Clarkson Ave", "Brooklyn", "NY", "11203", 40.655771, -73.945225]];
 function buildSample(){
@@ -583,9 +692,9 @@ function buildSample(){
  const rec=(i,o)=>{const [st,city,state,zip]=pl[i];const r={...o,addr1:st,addr2:o.addr2||'',city,state,zip};r.name=[r.first,r.last].join(' ');r.address=fullAddr(r.addr1,r.addr2,city,state+' '+zip);return r};
  const pNames=[['Testa','Sample'],['Bea','Nearby'],['Carl','Sample'],['Dora','Sample'],['Eli','Sample'],['Faye','Sample'],['Gus','Sample'],['Hana','Sample'],['Ivan','Sample'],['Jo','Sample'],['Kai','Sample'],['Lev','Sample'],['Mona','Sample'],['Ned','Sample'],['Opal','Sample'],['Pia','Sample'],['Quin','Sample'],['Rhea','Sample'],['Sol','Sample'],['Tess','Sample'],['Uma','Sample'],['Vic','Sample']];
  const pts=pl.map((_,i)=>rec(i,{id:String(9000101+i),first:pNames[i][0],last:pNames[i][1],addr2:i===0?'Apt 3B':'',type:'Primary'}));
- const cg=[];const addC=(code,first,last,home,phone)=>{const c=rec(home,{id:code,first,last});c.phones=phone?[{v:phone,label:'Mobile Phone'}]:[];c.phone=phone||'';c.discipline='';cg.push(c);return c};
- const V=[];let vid=1;const addV=(c,pi,abs,dur)=>{const day=Math.floor(abs/1440),st=abs-day*1440;V.push({patient:pts[pi].id,caregiver:c.id,date:isoFromDay(day),start:st,end:st+dur,absStart:abs,absEnd:abs+dur,id:'S'+(vid++)})};
- const maria=addC('SMP-1437','Maria','Farway',13,'(555) 010-1437');addV(maria,1,S-300,270);addV(maria,4,S+240,150);for(let d=1;d<=4;d++)addV(maria,1,S-300-d*1440,270);
+ const cg=[];const addC=(code,first,last,home,phone)=>{const c=rec(home,{id:code,first,last});c.phones=phone?[{v:phone,label:'Mobile Phone'}]:[];c.phone=phone||'';c.discipline='';c.sdisc=/^SMP-(0200|0900|20[0-9][0-9]|3001)$/.test(code)&&(code.length<8||+code.slice(4)%3===0)?'PCA':'HHA';cg.push(c);return c};
+ const V=[];let vid=1;const addV=(c,pi,abs,dur)=>{const day=Math.floor(abs/1440),st=abs-day*1440;V.push({patient:pts[pi].id,caregiver:c.id,date:isoFromDay(day),start:st,end:st+dur,absStart:abs,absEnd:abs+dur,id:'S'+(vid++),disc:c.sdisc||'HHA'})};
+ const maria=addC('SMP-1437','Maria','Farway',13,'(555) 010-1437');addV(maria,1,S-300,270);addV(maria,4,S+240,150);for(let d=1;d<=4;d++)addV(maria,1,S-300+d*1440,270);
  const nina=addC('SMP-0200','Nina','Onshift',12,'(555) 010-0200');addV(nina,2,S-120,270);
  const leo=addC('SMP-0650','Leo','Later',17,'(555) 010-0650');addV(leo,11,S-480,240);addV(leo,3,E+60,180);
  const henry=addC('SMP-0900','Henry','Nearhome',3,'(555) 010-0900');addV(henry,11,S-420,240);addV(henry,14,E+120,120);
@@ -593,71 +702,91 @@ function buildSample(){
  const gail=addC('SMP-1300','Gail','Busyelsewhere',5,'(555) 010-1300');addV(gail,12,S-60,240);
  const earl=addC('SMP-0400','Earl','Early',17,'(555) 010-0400');addV(earl,1,S-480,180);
  const far=[11,12,13,14,15,16,17,18,19,20,21],first=['Ana','Rosa','Grace','Fatima','Irina','Olga','Joy','Mercy','Lucia','Nadia','Esther','Comfort','Diana','Ruth'];
- for(let i=0;i<60;i++){const c=addC('SMP-'+String(2000+i),first[i%first.length],'Sample'+(i+1),far[i%far.length],'(555) 02'+(i%10)+'-'+String(2000+i));for(let k=0;k<4;k++)addV(c,far[(i+k)%far.length],S+(k-2)*1440+Math.round((((i*37)%600)-300)/15)*15,240)}
- for(let i=0;i<5;i++){const c=addC('SMP-'+String(3000+i),first[(i+3)%first.length],'Sample'+(i+61),[6,7,8,9,10][i],'(555) 030-'+String(3000+i));addV(c,[19,20,21,15,16][i],S+(i%2?-1440:1440),240)}
+ for(let i=0;i<60;i++){const c=addC('SMP-'+String(2000+i),first[i%first.length],'Sample'+(i+1),far[i%far.length],'(555) 02'+(i%10)+'-'+String(2000+i));for(let k=0;k<4;k++)addV(c,far[(i+k)%far.length],S+k*1440+Math.round((((i*37)%600)-300)/15)*15,240)}
+ for(let i=0;i<5;i++){const c=addC('SMP-'+String(3000+i),first[(i+3)%first.length],'Sample'+(i+61),[6,7,8,9,10][i],'(555) 030-'+String(3000+i));addV(c,[19,20,21,15,16][i],S+(i%2?2880:1440),240)}
  const seeded=new Map();pl.forEach(([st,city,state,zip,lat,lng],i)=>{seeded.set(geoKey(pts[i]),{lat,lng,src:'sample'})});
  return{patients:pts,caregivers:cg,visits:V,hasDiscipline:false,skipLine:'',source:'sample',loadedAt:Date.now(),coords:[...seeded]}}
 function applyData(d,opts={}){
- patients=d.patients;caregivers=d.caregivers;visits=d.visits;hasDiscipline=!!d.hasDiscipline;dataSource=d.source;loadedAt=d.loadedAt;skipLine=d.skipLine||'';
+ patients=d.patients;caregivers=d.caregivers;visits=d.visits;hasDiscipline=!!d.hasDiscipline;dataSource=d.source;loadedAt=d.loadedAt;skipLine=d.skipLine||'';dataSkips=d.skips||null;dataFiles=d.files||null;
  coords.clear();(d.coords||[]).forEach(([k,v])=>coords.set(k,v));
  patientsById=new Map(patients.map(p=>[p.id,p]));caregiversById=new Map(caregivers.map(c=>[c.id,c]));
  visitsByCaregiver=new Map();visitPatientsByCaregiver=new Map();let lo=null,hi=null;
  for(const v of visits){if(!visitsByCaregiver.has(v.caregiver)){visitsByCaregiver.set(v.caregiver,[]);visitPatientsByCaregiver.set(v.caregiver,new Set())}visitsByCaregiver.get(v.caregiver).push(v);visitPatientsByCaregiver.get(v.caregiver).add(v.patient);if(!lo||v.date<lo)lo=v.date;if(!hi||v.date>hi)hi=v.date}
  for(const list of visitsByCaregiver.values())list.sort((a,b)=>a.absStart-b.absStart);
  visitRange=lo?[lo,hi]:null;
+ // v61: discipline per caregiver, derived from their visits (Visit Report "Discipline"), plus the caregiver report's column if it has one
+ const dcount=new Map();for(const v of visits){if(!v.disc)continue;let m=dcount.get(v.caregiver);if(!m)dcount.set(v.caregiver,m=new Map());m.set(v.disc,(m.get(v.disc)||0)+1)}
+ const discTotals=new Map();
+ for(const c of caregivers){const m=dcount.get(c.id),fromV=m?[...m].sort((a,b)=>b[1]-a[1]).map(x=>x[0]):[],fromR=String(c.discipline||'').toUpperCase().split(/[,\/;]+/).map(x=>x.trim()).filter(Boolean);c.discs=[...new Set([...fromV,...fromR])];c.discs.forEach(d=>discTotals.set(d,(discTotals.get(d)||0)+1))}
+ hasDiscipline=discTotals.size>0;
+ const df=$('discFilter'),prevDisc=df.value;df.innerHTML='<option value="">All</option>'+[...discTotals].sort((a,b)=>b[1]-a[1]).map(([d])=>`<option value="${esc(d)}">${esc(d)}</option>`).join('');df.value=discTotals.has(prevDisc)?prevDisc:'';$('discField').classList.toggle('hidden',!hasDiscipline);
  const sample=dataSource==='sample';
- $('dataTitle').innerHTML=sample?'<span class="sample-badge">SAMPLE</span> Sample data loaded (fictional people, public places)':'<span class="upload-done-mark" aria-hidden="true">✓</span> HHAXchange reports loaded';
+ $('dataTitle').innerHTML=sample?'<span class="sample-badge">SAMPLE</span> Sample data loaded':'<span class="upload-done-mark" aria-hidden="true">✓</span> Reports loaded';
  $('uploadStep').classList.add('upload-done');$('uploadStep').classList.toggle('is-sample',sample);
- $('dataSubtitle').textContent=`${plural(patients.length,'patient')} · ${plural(caregivers.length,'caregiver')} · ${plural(visits.length,'scheduled visit')}${visitRange?` (${fmtDate(visitRange[0],{month:'numeric',day:'numeric'})}–${fmtDate(visitRange[1],{month:'numeric',day:'numeric',year:'numeric'})})`:''}`;
- const sk=$('dataSkipped');sk.textContent=skipLine;sk.classList.toggle('hidden',!skipLine);
+ $('dataSubtitle').classList.add('hidden');$('dataStats').classList.remove('hidden');$('dataDetails').classList.remove('hidden');
+ $('statPatients').textContent=fmtN(patients.length);$('statCaregivers').textContent=fmtN(caregivers.length);$('statVisits').textContent=fmtN(visits.length);
  $('clearData').classList.remove('hidden');updateFreshness();
  $('search').value='';$('patient').value='';$('searchWrap').classList.remove('has-value');$('suggestions').classList.add('hidden');
  clearResults('Search for a patient and click Find caregivers.');updateTarget();
  $('searchStatus').className='message muted';$('searchStatus').textContent=opts.restored?'Restored today\'s reports saved on this computer.':(sample?'Sample loaded. Try the patient "Testa Sample", then Find caregivers.':'Reports loaded. Choose a patient to begin.');
  if(!opts.restored)saveData()}
-function updateFreshness(){const el=$('dataFresh');if(!loadedAt){el.classList.add('hidden');return}const t=new Date(loadedAt),mins=Math.round((Date.now()-loadedAt)/60000);const ago=mins<1?'just now':mins<60?mins+' min ago':Math.floor(mins/60)+' h '+(mins%60?mins%60+' min ':'')+'ago';
- el.textContent=`Loaded ${t.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'})} (${ago}). Based on scheduled visits; schedules change during the day, so re-upload when needed.`+(dataSource==='sample'?'':' Saved on this computer only, until midnight.');el.classList.remove('hidden')}
+function updateFreshness(){const el=$('dataMeta');if(!loadedAt){el.classList.add('hidden');return}
+ const t=new Date(loadedAt).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+ el.textContent=`${visitRange?rangeLabel(visitRange[0],visitRange[1]):'No visits'} · Loaded ${t}`;el.classList.remove('hidden')}
+function openDetails(){const sample=dataSource==='sample',sk=dataSkips||{},past=sk.past?sk.past.n:0;
+ const reasons=Object.entries(sk).filter(([k,v])=>k!=='past'&&v.n).sort((a,b)=>b[1].n-a[1].n);const nSkip=reasons.reduce((a,[k,v])=>a+v.n,0);
+ const t=new Date(loadedAt).toLocaleString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
+ let h=`<div class="dd-sec"><div class="dd-row"><span>Loaded</span><b>${esc(t)}</b></div>`+(dataFiles?SLOT_KEYS.map(k=>`<div class="dd-row"><span>${esc(REPORTS[k].label)}</span><b>${esc(dataFiles[k]||'')}</b></div>`).join(''):'')+
+  `<div class="dd-row"><span>Visit dates</span><b>${visitRange?esc(fmtRange(visitRange[0],visitRange[1])):'none'}</b></div><div class="dd-row"><span>Visits used</span><b>${fmtN(visits.length)}</b></div>`+
+  (past?`<div class="dd-row"><span>Past visits ignored</span><b>${fmtN(past)}</b></div>`:'')+`<div class="dd-row"><span>Rows skipped</span><b>${fmtN(nSkip)}</b></div></div>`;
+ if(sample)h+=`<p class="dd-note">Sample data: fictional people at public places, for trying the map.</p>`;
+ if(nSkip){h+=`<div class="dd-sec"><div class="dd-title">Skipped visit rows</div>`+reasons.map(([k,v])=>`<details class="dd-reason"><summary><b>${fmtN(v.n)}</b> ${esc(SKIP_LABELS[k]||k)}</summary>${v.rows&&v.rows.length?`<div class="dd-tablewrap"><table class="dd-table"><tr><th>Visit ID</th><th>Patient</th><th>Caregiver</th><th>Date</th><th>Scheduled</th></tr>${v.rows.map(r=>`<tr><td>${esc(r.vid||'—')}</td><td>${esc(r.pt||'—')}</td><td>${esc(r.cg||'—')}</td><td>${esc(r.date||'—')}</td><td>${esc(r.sched||'—')}</td></tr>`).join('')}</table></div>${v.n>v.rows.length?`<div class="mini">First ${v.rows.length} of ${fmtN(v.n)} shown.</div>`:''}`:''}</details>`).join('')+`</div>`}
+ h+=`<div class="dd-sec dd-notes"><p>Based on the <b>scheduled</b> visits in the Visit Report, not live clock-in data. Schedules change during the day, so upload a fresh report when needed.</p>`+(sample?'':`<p>Saved on this computer only, until midnight. Nothing is uploaded to a server.</p>`)+`</div>`;
+ $('detailsBody').innerHTML=h;$('detailsDialog').showModal()}
 setInterval(updateFreshness,60000);
 // browser-local storage for today (IndexedDB). Nothing leaves the computer.
 const DB_NAME='hda-staffing-map',DB_KEY='today';
 function idb(){return new Promise((res,rej)=>{if(!window.indexedDB)return rej(Error('no IndexedDB'));const r=indexedDB.open(DB_NAME,1);r.onupgradeneeded=()=>r.result.createObjectStore('kv');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
 async function kv(mode,val){const db=await idb();return new Promise((res,rej)=>{const t=db.transaction('kv',mode==='get'?'readonly':'readwrite'),s=t.objectStore('kv');let rq=mode==='get'?s.get(DB_KEY):mode==='put'?s.put(val,DB_KEY):s.delete(DB_KEY);rq.onsuccess=()=>res(rq.result);rq.onerror=()=>rej(rq.error)})}
 let saveTimer=null;
-function saveData(){if(!patients.length)return;clearTimeout(saveTimer);saveTimer=setTimeout(()=>{kv('put',{v:58,day:localISO(new Date()),source:dataSource,loadedAt,patients,caregivers,visits,hasDiscipline,skipLine,coords:[...coords].filter(([k,v])=>hasPoint(v))}).catch(()=>{})},300)}
-async function restoreData(){try{const d=await kv('get');if(!d)return;if(d.day!==localISO(new Date())||d.v!==58){await kv('delete');return}applyData(d,{restored:true})}catch(e){}}
-async function clearData(){try{await kv('delete')}catch(e){}patients=[];caregivers=[];visits=[];patientsById=new Map();caregiversById=new Map();visitsByCaregiver=new Map();visitPatientsByCaregiver=new Map();coords.clear();dataSource=null;loadedAt=null;skipLine='';
- $('dataTitle').textContent='Step 1 · Upload reports';$('dataSubtitle').textContent='Upload your three HHAXchange reports to get started';$('uploadStep').classList.remove('upload-done','is-sample');['dataSkipped','dataFresh','clearData'].forEach(id=>$(id).classList.add('hidden'));
+function saveData(){if(!patients.length)return;clearTimeout(saveTimer);saveTimer=setTimeout(()=>{kv('put',{v:61,day:localISO(new Date()),source:dataSource,loadedAt,patients,caregivers,visits,hasDiscipline,skipLine,skips:dataSkips,files:dataFiles,coords:[...coords].filter(([k,v])=>hasPoint(v))}).catch(()=>{})},300)}
+async function restoreData(){try{const d=await kv('get');if(!d)return;if(d.day!==localISO(new Date())||d.v!==61){await kv('delete');return}applyData(d,{restored:true})}catch(e){}}
+async function clearData(){try{await kv('delete')}catch(e){}patients=[];caregivers=[];visits=[];patientsById=new Map();caregiversById=new Map();visitsByCaregiver=new Map();visitPatientsByCaregiver=new Map();coords.clear();dataSource=null;loadedAt=null;skipLine='';hasDiscipline=false;$('discFilter').innerHTML='<option value="">All</option>';$('discField').classList.add('hidden');
+ $('dataTitle').textContent='Step 1 · Upload reports';$('dataSubtitle').textContent='Upload your three HHAXchange reports to get started';$('uploadStep').classList.remove('upload-done','is-sample');['dataStats','dataMeta','dataDetails','clearData'].forEach(id=>$(id).classList.add('hidden'));$('dataSubtitle').classList.remove('hidden');dataSkips=null;dataFiles=null;
  $('search').value='';$('patient').value='';$('searchWrap').classList.remove('has-value');clearResults('Upload reports and choose a patient to see matches.');updateTarget();$('searchStatus').className='message muted';$('searchStatus').textContent='Data cleared from this computer.'}
 // summary chips + call list
 function renderChips(list,ctx){const el=$('chips');if(!list){el.innerHTML='';el.classList.add('hidden');return}
- const c={green:0,blue:0,gray:0};list.forEach(x=>c[x.cat]++);
- el.innerHTML=(ctx.timed?`<span class="chip green"><i></i>${c.green} on a shift nearby</span><span class="chip blue"><i></i>${c.blue} no visit scheduled, lives nearby</span><span class="chip gray"><i></i>${c.gray} busy elsewhere</span>`:`<span class="chip green"><i></i>${c.green} with visits nearby</span><span class="chip blue"><i></i>${c.blue} live nearby</span>`)+`<span class="chip-actions"><button type="button" class="ghost" id="copyList">Copy call list</button><button type="button" class="ghost" id="printList">Print</button></span>`;
+ const c={green:0,blue:0};list.forEach(x=>c[x.cat]++);
+ el.innerHTML=`<span class="chip day-chip">${esc(dayName(ctx.D))}</span><span class="chip green"><i></i>${c.green} scheduled nearby</span><span class="chip blue"><i></i>${c.blue} live nearby</span><span class="chip-actions"><button type="button" class="ghost" id="copyList">Copy call list</button><button type="button" class="ghost" id="printList">Print</button></span>`;
  el.classList.remove('hidden');$('copyList').onclick=copyCallList;$('printList').onclick=printCallList}
-function plainStatus(x,ctx){const d=document.createElement('div');d.innerHTML=statusLine(x,ctx);return d.textContent}
-function callListRows(){if(!lastSearch||!lastSearch.list)return[];const showGray=$('showGray').checked;return lastSearch.list.filter(x=>x.cat!=='gray'||showGray)}
-function callListHeader(){const {ctx}=lastSearch,p=ctx.p;return `${p.name} (${p.id}) · ${p.address}\n${ctx.timed?`Coverage ${fmtDate(isoFromDay(ctx.D),{weekday:'short',month:'numeric',day:'numeric'})} ${fmtClock(ctx.S%1440)}–${fmtClock(ctx.E%1440)}`:'Any time'} · ${Number.isFinite(ctx.max)?'within '+ctx.max+' mi':'any distance'} (straight-line, from scheduled visits)`}
+function plainStatus(x,ctx){return headline(x,ctx)+' · '+scheduleText(x,ctx)}
+function callListRows(){if(!lastSearch||!lastSearch.list)return[];return lastSearch.list}
+function callListHeader(){const {ctx}=lastSearch,p=ctx.p;return `${p.name} (${p.id}) · ${p.address}\nCoverage day: ${dayName(ctx.D)} · ${Number.isFinite(ctx.max)?'within '+ctx.max+' mi':'any distance'} (straight-line, from scheduled visits)`}
 async function copyCallList(){const rows=callListRows();if(!rows.length)return;const {ctx}=lastSearch;
- const txt=callListHeader()+'\n\n'+rows.map((x,i)=>`${i+1}. ${x.c.name} (${x.c.id}) · ${x.c.phone||'no phone in report'}\n   ${plainStatus(x,ctx)}`).join('\n');
+ const txt=callListHeader()+'\n\n'+rows.map((x,i)=>`${i+1}. ${x.c.name} (${x.c.id})${hasDiscipline&&x.c.discs&&x.c.discs.length?' · '+x.c.discs.join('/'):''} · ${x.c.phone||'no phone in report'}\n   ${plainStatus(x,ctx)}`).join('\n');
  let ok=false;try{await navigator.clipboard.writeText(txt);ok=true}catch(e){const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{ok=document.execCommand('copy')}catch(_){}ta.remove()}
  const b=$('copyList');if(b){b.textContent=ok?`Copied ${rows.length} ✓`:'Copy failed';setTimeout(()=>{if($('copyList'))$('copyList').textContent='Copy call list'},2000)}}
 function printCallList(){const rows=callListRows();if(!rows.length)return;const {ctx}=lastSearch;const w=window.open('','_blank');if(!w){alert('Allow pop-ups to print the call list.');return}
- const lab={green:'On a shift nearby',blue:'Lives nearby',gray:'Busy elsewhere'};
- w.document.write(`<!doctype html><title>Call list · ${esc(ctx.p.name)}</title><style>body{font:13px system-ui,sans-serif;color:#17344c;margin:28px}h1{font-size:18px;margin:0 0 4px}p{margin:0 0 14px;color:#506a7c}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #dde6ee;padding:7px 6px;text-align:left;vertical-align:top}th{font-size:11px;text-transform:uppercase;color:#6a8193}.box{width:14px;height:14px;border:1.5px solid #8aa;display:inline-block;border-radius:3px}footer{margin-top:16px;font-size:11px;color:#8093a3}</style><h1>Call list · ${esc(ctx.p.name)}</h1><p>${esc(callListHeader()).replace('\n','<br>')}</p><table><tr><th>#</th><th>Caregiver</th><th>Phone</th><th>Category</th><th>Schedule / distance</th><th>Called</th></tr>${rows.map((x,i)=>`<tr><td>${i+1}</td><td><b>${esc(x.c.name)}</b><br>${esc(x.c.id)}</td><td>${esc(x.c.phone||'—')}</td><td>${ctx.timed?lab[x.cat]:(x.cat==='green'?'Visits nearby':'Lives nearby')}</td><td>${esc(plainStatus(x,ctx))}</td><td><span class="box"></span></td></tr>`).join('')}</table><footer>HDA Care Staffing Map ${APP_VERSION} · printed ${new Date().toLocaleString('en-US')} · schedule-based, not live EVV</footer>`);
+ const lab={green:'Scheduled nearby',blue:'Lives nearby'};
+ w.document.write(`<!doctype html><title>Call list · ${esc(ctx.p.name)}</title><style>body{font:13px system-ui,sans-serif;color:#17344c;margin:28px}h1{font-size:18px;margin:0 0 4px}p{margin:0 0 14px;color:#506a7c}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #dde6ee;padding:7px 6px;text-align:left;vertical-align:top}th{font-size:11px;text-transform:uppercase;color:#6a8193}.box{width:14px;height:14px;border:1.5px solid #8aa;display:inline-block;border-radius:3px}footer{margin-top:16px;font-size:11px;color:#8093a3}</style><h1>Call list · ${esc(ctx.p.name)}</h1><p>${esc(callListHeader()).replace('\n','<br>')}</p><table><tr><th>#</th><th>Caregiver</th><th>Phone</th><th>Category</th><th>Distance / schedule</th><th>Called</th></tr>${rows.map((x,i)=>`<tr><td>${i+1}</td><td><b>${esc(x.c.name)}</b><br>${esc(x.c.id)}${hasDiscipline&&x.c.discs&&x.c.discs.length?' · '+esc(x.c.discs.join('/')):''}</td><td>${esc(x.c.phone||'—')}</td><td>${lab[x.cat]}</td><td>${esc(plainStatus(x,ctx))}</td><td><span class="box"></span></td></tr>`).join('')}</table><footer>HDA Care Staffing Map ${APP_VERSION} · printed ${new Date().toLocaleString('en-US')} · schedule-based, not live EVV</footer>`);
  w.document.close();w.focus();setTimeout(()=>w.print(),250)}
 function dirLink(x,ctx){if(!hasPoint(x.pt)||!hasPoint(ctx.tp))return '';return `<a class="dir" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=${x.pt.lat.toFixed(5)},${x.pt.lng.toFixed(5)}&destination=${ctx.tp.lat.toFixed(5)},${ctx.tp.lng.toFixed(5)}">Directions ↗</a>`}
 
 /* ---------- page wiring (kept from v57) ---------- */
 if(typeof L==='undefined'){$('map').textContent='Map library unavailable. Internet access required.'}else{map=L.map('map',{zoomControl:true}).setView([40.66,-73.96],11);markers=L.layerGroup().addTo(map);paths=L.layerGroup().addTo(map)}
-function setDefaultTimes(){const now=new Date();let m=now.getHours()*60+now.getMinutes();m=Math.ceil((m+1)/15)*15;let d=new Date(now);if(m>=1440){m-=1440;d.setDate(d.getDate()+1)}$('date').value=`${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;const e=(m+120)%1440;$('start').value=`${pad2(Math.floor(m/60))}:${pad2(m%60)}`;$('end').value=`${pad2(Math.floor(e/60))}:${pad2(e%60)}`}
-setDefaultTimes();
-function syncPickers(){let d=$('date').value;$('dateDisplay').textContent=d?new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}):'Select date';for(let k of ['start','end']){let v=$(k).value;if(v){$(k+'Display').textContent=fmtClock(mins(v))}}}
-['date','start','end'].forEach(k=>$(k).addEventListener('change',syncPickers));['date','start','end'].forEach(k=>$(k).addEventListener('input',syncPickers));syncPickers();
-['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].forEach((d,i)=>$('weekdays').insertAdjacentHTML('beforeend',`<label class="day"><input type="checkbox" value="${i}" ${i>0&&i<6?'checked':''}>${d}</label>`));
+$('map').insertAdjacentHTML('beforeend',`<div id="mapLoading" class="map-loading hidden" role="status" aria-live="polite"><div class="ml-card ml-progress"><div class="ml-spin" aria-hidden="true"></div><div class="ml-body"><div class="ml-head"><span id="mlTitle">Locating nearby caregivers…</span><b id="mlPct">0%</b></div><div class="ml-sub" id="mlSub"></div><div class="ml-bar"><i id="mlFill"></i></div></div><button type="button" class="ml-stop hidden" id="mlStop" title="Stop looking up more addresses and show what was found">Stop</button></div><div class="ml-card ml-err" role="alert"><div class="ml-erricon" aria-hidden="true">!</div><div class="ml-body"><div class="ml-head"><span id="mlErrTitle">Search could not finish</span></div><div class="ml-sub" id="mlErrDetail"></div></div><button type="button" class="ml-close" id="mlClose" aria-label="Close message" title="Close">×</button></div></div>`);
+if(typeof L!=='undefined'){L.DomEvent.disableClickPropagation($('mapLoading'));L.DomEvent.disableScrollPropagation($('mapLoading'))}
+$('mlClose').onclick=loadingClose;$('mlStop').onclick=()=>{searchStop=true;$('mlStop').classList.add('hidden');$('mlSub').textContent='Stopping… showing what was found'};
+// v61: coverage day = Today / Tomorrow (Custom date: coming soon)
+function setDay(off){dayOffset=off;[['dayToday',0],['dayTomorrow',1]].forEach(([id,o])=>{$(id).classList.toggle('active',o===off);$(id).setAttribute('aria-checked',String(o===off))});
+ if(lastSearch&&!busy&&target()&&lastSearch.ctx.p.id===target().id)findWithLocations()}
+$('dayToday').onclick=()=>setDay(0);$('dayTomorrow').onclick=()=>setDay(1);
+$('dayCustom').onclick=e=>{e.preventDefault();const b=$('dayCustom');b.classList.add('show-tip');clearTimeout(b._t);b._t=setTimeout(()=>b.classList.remove('show-tip'),1600)};
+$('dataDetails').onclick=openDetails;$('detailsClose').onclick=()=>$('detailsDialog').close();$('detailsDialog').addEventListener('click',e=>{if(e.target===$('detailsDialog'))$('detailsDialog').close()});
 $('openUpload').onclick=()=>{$('uploadDialog').showModal();closeHelp();refreshUploadUI(false)};$('closeUpload').onclick=()=>$('uploadDialog').close();
 $('import').onclick=importFiles;$('find').onclick=findWithLocations;$('search').oninput=fillPatients;
 $('demoConsent').addEventListener('change',()=>refreshUploadUI(false));
-$('ignoreTime').onchange=()=>{$('scheduleFields').classList.toggle('hidden',$('ignoreTime').checked)};
-$('showGray').addEventListener('change',()=>render(false,true));
+$('discFilter').addEventListener('change',()=>{if(lastSearch&&!busy)render(false,true)});
 $('recenter').onclick=()=>{let p=target(),pt=p&&coords.get(geoKey(p));if(hasPoint(pt)){showView('map');map.setView([pt.lat,pt.lng],Math.max(map.getZoom(),zoomFor()));$('mapStatus').textContent=''}};
 SLOT_KEYS.forEach(k=>$(SLOT_IDS[k][0]).addEventListener('change',()=>onFileChosen(k)));
 const help=$('reportHelp');let activeHelp=null;function closeHelp(){help.classList.remove('visible');activeHelp=null;document.querySelectorAll('.info').forEach(b=>b.setAttribute('aria-expanded','false'))}
@@ -672,7 +801,7 @@ const satelliteTiles=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/se
 $('streetLayer').onclick=()=>{map.removeLayer(satelliteTiles);streetTiles.addTo(map);$('streetLayer').classList.add('active');$('satelliteLayer').classList.remove('active')};
 $('satelliteLayer').onclick=()=>{map.removeLayer(streetTiles);satelliteTiles.addTo(map);$('satelliteLayer').classList.add('active');$('streetLayer').classList.remove('active')};
 $('fullMap').onclick=()=>{const b=document.querySelector('.mapbox');const on=b.classList.toggle('is-fullscreen');$('fullMap').textContent=on?'✕':'⛶';$('fullMap').title=on?'Exit full screen':'Full screen map';$('fullMap').setAttribute('aria-label',on?'Exit full screen':'Full screen map');document.body.style.overflow=on?'hidden':'';showView('map');setTimeout(()=>{map.invalidateSize();const p=target(),pt=p&&coords.get(geoKey(p));if(hasPoint(pt))map.panTo([pt.lat,pt.lng],{animate:false})},80)};
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.querySelector('.mapbox').classList.contains('is-fullscreen'))$('fullMap').click()});
+document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if($('mapLoading').classList.contains('is-error')){loadingClose();return}if(document.querySelector('.mapbox').classList.contains('is-fullscreen'))$('fullMap').click()});
 refreshUploadUI(false);
 $('sampleData').onclick=()=>{if(patients.length&&dataSource!=='sample'&&!confirm('Replace the loaded reports with sample data?'))return;applyData(buildSample())};
 $('clearData').onclick=()=>{if(confirm('Clear the loaded reports from this computer?'))clearData()};
